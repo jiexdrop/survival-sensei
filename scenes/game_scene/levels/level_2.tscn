@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://fpb2ysodtcuy" path="res://addons/player2/helpers/tool_call/ToolCallFunctionDefinition.gd" id="7_g4npr"]
 [ext_resource type="Script" uid="uid://dt7mt3t7a08me" path="res://addons/player2/helpers/tool_call/ToolCallFunctionDefinitions.gd" id="8_paaax"]
 [ext_resource type="Texture2D" uid="uid://co4cid6fxfr48" path="res://dev_scenes/thirdparty/kenney/tiny-dungeon/Tiles/tile_0096.png" id="9_g6k0t"]
-[ext_resource type="Script" uid="uid://dn11wvkta53ae" path="res://scenes/game_scene/levels/player.gd" id="10_7mefh"]
+[ext_resource type="Script" uid="uid://dn11wvkta53ae" path="res://scenes/game_scene/levels/entities/player.gd" id="10_7mefh"]
 [ext_resource type="Texture2D" uid="uid://bvlw422cpg71" path="res://dev_scenes/thirdparty/kenney/tiny-dungeon/Tiles/tile_0098.png" id="11_phlqy"]
 [ext_resource type="Script" uid="uid://c0cs0aiucn22f" path="res://scenes/game_scene/levels/chat_rect.gd" id="12_jq5r2"]
 [ext_resource type="PackedScene" uid="uid://dojecawo8ra37" path="res://dev_scenes/rpg_example/speech_bubble.tscn" id="13_ihcs8"]
