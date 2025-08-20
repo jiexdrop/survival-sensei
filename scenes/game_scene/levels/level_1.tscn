@@ -1,4 +1,4 @@
-[gd_scene load_steps=163 format=4 uid="uid://bqrbyialgiray"]
+[gd_scene load_steps=165 format=4 uid="uid://bqrbyialgiray"]
 
 [ext_resource type="Script" uid="uid://dka3qvssodgiw" path="res://scenes/game_scene/levels/level.gd" id="1_tukvp"]
 [ext_resource type="Texture2D" uid="uid://bwrv60mgqgl00" path="res://assets/Pixel Crawler/Environment/Tilesets/Floors_Tiles.png" id="1_ua84b"]
@@ -19,6 +19,8 @@
 [ext_resource type="Texture2D" uid="uid://co4cid6fxfr48" path="res://dev_scenes/thirdparty/kenney/tiny-dungeon/Tiles/tile_0096.png" id="15_1ue85"]
 [ext_resource type="Texture2D" uid="uid://din6cf5ow4k2t" path="res://assets/Pixel Crawler/Environment/Props/Static/Rocks.png" id="19_1wmy8"]
 [ext_resource type="PackedScene" uid="uid://b5o06ljh5o68h" path="res://scenes/game_scene/levels/entities/wood.tscn" id="19_h6ldy"]
+[ext_resource type="Script" uid="uid://dxe2gy3yx12p8" path="res://scenes/game_scene/levels/stick_search.gd" id="20_h6ldy"]
+[ext_resource type="PackedScene" uid="uid://bls7hmrw213pt" path="res://scenes/game_scene/levels/entities/stick.tscn" id="21_yx5hq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h6ldy"]
 texture = ExtResource("2_1wmy8")
@@ -1889,8 +1891,10 @@ position = Vector2(102, -55)
 [node name="Player2AINPC" type="Node" parent="Entity" node_paths=PackedStringArray("tts_audio_player", "tool_calls_scan_node_for_functions")]
 script = ExtResource("3_bsimd")
 character_name = "Sensei"
-character_description = "You are the Teacher. You are teaching the player to survive under any circumstance.
-The first mission is to build a camp fire. The player has to collect logs by clicking on them, and to put on a fire, by clicking on it."
+character_description = "You are the Teacher. You are teaching the player to survive under any circumstance."
+character_system_message = "Match the player's mood. Be direct with your replies, but if the player is talkative then be talkative as well.
+The first mission is to build a camp fire. The player has to collect logs by clicking on them, and to put on a fire, by clicking on it.
+The place to build the camp fire is surrounded by rocks."
 tts_audio_player = NodePath("../AudioStreamPlayer")
 character_config = SubResource("Resource_hehv2")
 chat_config = SubResource("Resource_m77gi")
@@ -1918,5 +1922,15 @@ shape = SubResource("CircleShape2D_ua84b")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
 texture = ExtResource("6_ci2kr")
+
+[node name="StickSearch" type="Node2D" parent="."]
+visible = false
+script = ExtResource("20_h6ldy")
+
+[node name="Stick" parent="StickSearch" instance=ExtResource("21_yx5hq")]
+position = Vector2(-144, -87)
+
+[node name="Stick2" parent="StickSearch" instance=ExtResource("21_yx5hq")]
+position = Vector2(105, 25)
 
 [connection signal="input_event" from="Fire" to="Fire" method="_on_input_event"]

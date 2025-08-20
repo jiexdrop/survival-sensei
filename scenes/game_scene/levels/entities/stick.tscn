@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bls7hmrw213pt"]
+
+[ext_resource type="Texture2D" uid="uid://dpbo6yknjbn53" path="res://assets/Pixel Crawler/Environment/Props/Static/Meat.png" id="1_htu0y"]
+[ext_resource type="Script" uid="uid://r80hc2u1uahx" path="res://scenes/game_scene/levels/entities/stick.gd" id="1_vr60b"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h6ldy"]
+
+[node name="Stick" type="Area2D"]
+script = ExtResource("1_vr60b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_h6ldy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_htu0y")
+region_enabled = true
+region_rect = Rect2(54, 64, 5, 16)
