@@ -1690,6 +1690,7 @@ tile_set = SubResource("TileSet_w6i3l")
 tile_set = SubResource("TileSet_w6i3l")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
