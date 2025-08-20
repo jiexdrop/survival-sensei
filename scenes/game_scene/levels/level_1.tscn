@@ -285,6 +285,80 @@ texture = ExtResource("1_ua84b")
 physics_layer_0/collision_layer = 1
 sources/2 = SubResource("TileSetAtlasSource_hehv2")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_5hj03"]
+atlas = ExtResource("13_hehv2")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1wmy8"]
+atlas = ExtResource("13_hehv2")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h6ldy"]
+atlas = ExtResource("13_hehv2")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0b6gl"]
+atlas = ExtResource("13_hehv2")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yx5hq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5hj03")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1wmy8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h6ldy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0b6gl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_27a66"]
+atlas = ExtResource("14_27a66")
+region = Rect2(0, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m77gi"]
+atlas = ExtResource("14_27a66")
+region = Rect2(32, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tukvp"]
+atlas = ExtResource("14_27a66")
+region = Rect2(64, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8a31v"]
+atlas = ExtResource("14_27a66")
+region = Rect2(96, 0, 32, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5hj03"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_27a66")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m77gi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tukvp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8a31v")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m77gi"]
+
 [sub_resource type="Resource" id="Resource_hehv2"]
 script = ExtResource("10_fciuq")
 use_player2_selected_character = false
@@ -1600,80 +1674,6 @@ radius = 8.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_ua84b"]
 radius = 8.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5hj03"]
-atlas = ExtResource("13_hehv2")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1wmy8"]
-atlas = ExtResource("13_hehv2")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_h6ldy"]
-atlas = ExtResource("13_hehv2")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0b6gl"]
-atlas = ExtResource("13_hehv2")
-region = Rect2(96, 0, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_yx5hq"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5hj03")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1wmy8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_h6ldy")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0b6gl")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_27a66"]
-atlas = ExtResource("14_27a66")
-region = Rect2(0, 0, 32, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_m77gi"]
-atlas = ExtResource("14_27a66")
-region = Rect2(32, 0, 32, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tukvp"]
-atlas = ExtResource("14_27a66")
-region = Rect2(64, 0, 32, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8a31v"]
-atlas = ExtResource("14_27a66")
-region = Rect2(96, 0, 32, 48)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_5hj03"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_27a66")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_m77gi")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tukvp")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8a31v")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_m77gi"]
-
 [node name="Level1" type="Node2D"]
 texture_filter = 1
 script = ExtResource("1_tukvp")
@@ -1690,40 +1690,6 @@ tile_set = SubResource("TileSet_w6i3l")
 tile_set = SubResource("TileSet_w6i3l")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2, 2)
-
-[node name="Entity" type="CharacterBody2D" parent="."]
-position = Vector2(102, -55)
-
-[node name="Player2AINPC" type="Node" parent="Entity" node_paths=PackedStringArray("tts_audio_player", "tool_calls_scan_node_for_functions")]
-script = ExtResource("3_bsimd")
-character_name = "Sensei"
-character_description = "You are the Teacher. You are teaching the player to survive under any circumstance.
-The first mission is to build a camp fire. The player has to collect logs by clicking on them, and to put on a fire, by clicking on it."
-tts_audio_player = NodePath("../AudioStreamPlayer")
-character_config = SubResource("Resource_hehv2")
-chat_config = SubResource("Resource_m77gi")
-tool_calls_scan_node_for_functions = [NodePath("../..")]
-tool_calls_function_definitions = SubResource("Resource_tukvp")
-metadata/_custom_type_script = "uid://bupnh0kqklshe"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Entity"]
-shape = SubResource("CircleShape2D_8avtb")
-
-[node name="Sprite2D" type="Sprite2D" parent="Entity"]
-texture = ExtResource("15_1ue85")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Entity"]
-
-[node name="Player" type="CharacterBody2D" parent="."]
-position = Vector2(-108, -53)
-script = ExtResource("10_8avtb")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-shape = SubResource("CircleShape2D_ua84b")
-
-[node name="Sprite2D" type="Sprite2D" parent="Player"]
-texture = ExtResource("6_ci2kr")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -1757,25 +1723,6 @@ size_flags_horizontal = 3
 
 [node name="Speech Bubble" parent="CanvasLayer/ChatRect/HBoxContainer" instance=ExtResource("7_aymcx")]
 layout_mode = 2
-
-[node name="Fire" type="Area2D" parent="." node_paths=PackedStringArray("player_2ainpc", "level_1")]
-script = ExtResource("13_m77gi")
-player_2ainpc = NodePath("../Entity/Player2AINPC")
-level_1 = NodePath("..")
-
-[node name="FirePlace" type="AnimatedSprite2D" parent="Fire"]
-visible = false
-position = Vector2(0, 8)
-sprite_frames = SubResource("SpriteFrames_yx5hq")
-
-[node name="Fire" type="AnimatedSprite2D" parent="Fire"]
-visible = false
-sprite_frames = SubResource("SpriteFrames_5hj03")
-autoplay = "default"
-frame_progress = 0.595598
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Fire"]
-shape = SubResource("CircleShape2D_m77gi")
 
 [node name="Rocks" type="Node2D" parent="."]
 
@@ -1827,6 +1774,25 @@ texture = ExtResource("19_1wmy8")
 region_enabled = true
 region_rect = Rect2(145, 100, 15, 11)
 
+[node name="Fire" type="Area2D" parent="." node_paths=PackedStringArray("player_2ainpc", "level_1")]
+script = ExtResource("13_m77gi")
+player_2ainpc = NodePath("../Entity/Player2AINPC")
+level_1 = NodePath("..")
+
+[node name="FirePlace" type="AnimatedSprite2D" parent="Fire"]
+visible = false
+position = Vector2(0, 8)
+sprite_frames = SubResource("SpriteFrames_yx5hq")
+
+[node name="Fire" type="AnimatedSprite2D" parent="Fire"]
+visible = false
+sprite_frames = SubResource("SpriteFrames_5hj03")
+autoplay = "default"
+frame_progress = 0.595598
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fire"]
+shape = SubResource("CircleShape2D_m77gi")
+
 [node name="Wood" parent="." instance=ExtResource("19_h6ldy")]
 position = Vector2(-108, -8)
 
@@ -1835,5 +1801,38 @@ position = Vector2(-52, -52)
 
 [node name="Wood3" parent="." instance=ExtResource("19_h6ldy")]
 position = Vector2(-120, -87)
+
+[node name="Entity" type="CharacterBody2D" parent="."]
+position = Vector2(102, -55)
+
+[node name="Player2AINPC" type="Node" parent="Entity" node_paths=PackedStringArray("tts_audio_player", "tool_calls_scan_node_for_functions")]
+script = ExtResource("3_bsimd")
+character_name = "Sensei"
+character_description = "You are the Teacher. You are teaching the player to survive under any circumstance.
+The first mission is to build a camp fire. The player has to collect logs by clicking on them, and to put on a fire, by clicking on it."
+tts_audio_player = NodePath("../AudioStreamPlayer")
+character_config = SubResource("Resource_hehv2")
+chat_config = SubResource("Resource_m77gi")
+tool_calls_scan_node_for_functions = [NodePath("../..")]
+tool_calls_function_definitions = SubResource("Resource_tukvp")
+metadata/_custom_type_script = "uid://bupnh0kqklshe"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Entity"]
+shape = SubResource("CircleShape2D_8avtb")
+
+[node name="Sprite2D" type="Sprite2D" parent="Entity"]
+texture = ExtResource("15_1ue85")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Entity"]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(-108, -53)
+script = ExtResource("10_8avtb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("CircleShape2D_ua84b")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+texture = ExtResource("6_ci2kr")
 
 [connection signal="body_entered" from="Fire" to="Fire" method="_on_body_entered"]
