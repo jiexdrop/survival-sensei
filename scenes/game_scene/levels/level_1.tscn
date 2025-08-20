@@ -1776,10 +1776,9 @@ texture = ExtResource("19_1wmy8")
 region_enabled = true
 region_rect = Rect2(145, 100, 15, 11)
 
-[node name="Fire" type="Area2D" parent="." node_paths=PackedStringArray("player_2ainpc", "level_1")]
+[node name="Fire" type="Area2D" parent="." node_paths=PackedStringArray("player_2ainpc")]
 script = ExtResource("13_m77gi")
 player_2ainpc = NodePath("../Entity/Player2AINPC")
-level_1 = NodePath("..")
 
 [node name="FirePlace" type="AnimatedSprite2D" parent="Fire"]
 visible = false
