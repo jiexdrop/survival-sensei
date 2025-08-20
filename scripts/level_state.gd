@@ -1,7 +1,5 @@
 class_name LevelState
 extends Resource
 
-@export var color : Color
-@export var tutorial_read : bool = false
 @export var collected_wood : int = 0
 @export var collected_stick : bool = false
