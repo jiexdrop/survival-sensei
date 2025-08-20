@@ -358,6 +358,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m77gi"]
+radius = 14.0
 
 [sub_resource type="Resource" id="Resource_hehv2"]
 script = ExtResource("10_fciuq")
@@ -1777,16 +1778,17 @@ region_enabled = true
 region_rect = Rect2(145, 100, 15, 11)
 
 [node name="Fire" type="Area2D" parent="." node_paths=PackedStringArray("player_2ainpc")]
+position = Vector2(0, 9)
 script = ExtResource("13_m77gi")
 player_2ainpc = NodePath("../Entity/Player2AINPC")
 
 [node name="FirePlace" type="AnimatedSprite2D" parent="Fire"]
 visible = false
-position = Vector2(0, 8)
 sprite_frames = SubResource("SpriteFrames_yx5hq")
 
 [node name="Fire" type="AnimatedSprite2D" parent="Fire"]
 visible = false
+position = Vector2(0, -8)
 sprite_frames = SubResource("SpriteFrames_5hj03")
 autoplay = "default"
 frame_progress = 0.595598

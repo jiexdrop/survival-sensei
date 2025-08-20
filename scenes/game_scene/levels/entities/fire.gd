@@ -18,5 +18,7 @@ func _on_body_entered(body: Node2D) -> void:
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		print("Collected Wood: ", level_1.level_state.collected_wood)
-		if level_1.level_state.collected_wood >= 3:
+		if fire_place.visible:
+			fire.visible = true
+		if level_1.level_state.collected_wood >= 3 and not fire_place.visible:
 			fire_place.visible = true
