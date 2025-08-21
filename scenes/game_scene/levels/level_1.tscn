@@ -22,7 +22,7 @@
 [ext_resource type="Script" uid="uid://dxe2gy3yx12p8" path="res://scenes/game_scene/levels/stick_search.gd" id="20_h6ldy"]
 [ext_resource type="PackedScene" uid="uid://bls7hmrw213pt" path="res://scenes/game_scene/levels/entities/stick.tscn" id="21_yx5hq"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h6ldy"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0b6gl"]
 texture = ExtResource("2_1wmy8")
 2:0/0 = 0
 3:0/0 = 0
@@ -109,7 +109,7 @@ texture = ExtResource("2_1wmy8")
 14:7/0 = 0
 15:7/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hehv2"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yx5hq"]
 texture = ExtResource("1_ua84b")
 1:0/0 = 0
 2:0/0 = 0
@@ -374,8 +374,8 @@ texture = ExtResource("1_ua84b")
 
 [sub_resource type="TileSet" id="TileSet_w6i3l"]
 physics_layer_0/collision_layer = 1
-sources/2 = SubResource("TileSetAtlasSource_hehv2")
-sources/0 = SubResource("TileSetAtlasSource_h6ldy")
+sources/2 = SubResource("TileSetAtlasSource_yx5hq")
+sources/0 = SubResource("TileSetAtlasSource_0b6gl")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5hj03"]
 atlas = ExtResource("13_hehv2")
@@ -1803,6 +1803,7 @@ mouse_filter = 2
 [node name="TextEdit" type="TextEdit" parent="CanvasLayer/ChatRect/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+placeholder_text = "Type here to talk"
 
 [node name="Speech Bubble" parent="CanvasLayer/ChatRect/HBoxContainer" instance=ExtResource("7_aymcx")]
 layout_mode = 2

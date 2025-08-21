@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://bj8ae0hidmukk"]
+[gd_scene load_steps=50 format=4 uid="uid://bj8ae0hidmukk"]
 
 [ext_resource type="Script" uid="uid://dka3qvssodgiw" path="res://scenes/game_scene/levels/level.gd" id="1_gkltp"]
 [ext_resource type="Texture2D" uid="uid://bwrv60mgqgl00" path="res://assets/Pixel Crawler/Environment/Tilesets/Floors_Tiles.png" id="2_bp8id"]
@@ -7,6 +7,8 @@
 [ext_resource type="Script" uid="uid://b6indg81ao1we" path="res://addons/player2/Player2APIConfig.gd" id="5_slyx1"]
 [ext_resource type="Script" uid="uid://bpvfdwoxmeah3" path="res://addons/player2/Player2AIChatConfig.gd" id="6_vjvyu"]
 [ext_resource type="Script" uid="uid://fpb2ysodtcuy" path="res://addons/player2/helpers/tool_call/ToolCallFunctionDefinition.gd" id="7_g4npr"]
+[ext_resource type="Texture2D" uid="uid://cxem041paxdk4" path="res://assets/Pixel Crawler/Environment/Props/Animated/Pan_03-Sheet.png" id="7_olh7b"]
+[ext_resource type="Texture2D" uid="uid://dsfcv4cu7rvqu" path="res://assets/Pixel Crawler/Environment/Props/Static/Farm.png" id="8_7n1hf"]
 [ext_resource type="Script" uid="uid://dt7mt3t7a08me" path="res://addons/player2/helpers/tool_call/ToolCallFunctionDefinitions.gd" id="8_paaax"]
 [ext_resource type="Texture2D" uid="uid://co4cid6fxfr48" path="res://dev_scenes/thirdparty/kenney/tiny-dungeon/Tiles/tile_0096.png" id="9_g6k0t"]
 [ext_resource type="Script" uid="uid://dn11wvkta53ae" path="res://scenes/game_scene/levels/entities/player.gd" id="10_7mefh"]
@@ -14,6 +16,9 @@
 [ext_resource type="Script" uid="uid://c0cs0aiucn22f" path="res://scenes/game_scene/levels/chat_rect.gd" id="12_jq5r2"]
 [ext_resource type="PackedScene" uid="uid://dojecawo8ra37" path="res://dev_scenes/rpg_example/speech_bubble.tscn" id="13_ihcs8"]
 [ext_resource type="Texture2D" uid="uid://056enibgqv7i" path="res://assets/Pixel Crawler/Environment/Props/Static/Trees/Model_01/Size_02.png" id="13_xg5px"]
+[ext_resource type="Texture2D" uid="uid://tjaiwgd3exy" path="res://assets/Pixel Crawler/Environment/Structures/Stations/Cooking Station/Cooker/Cooker_03-Sheet.png" id="15_hhxfa"]
+[ext_resource type="Texture2D" uid="uid://soghkxx4jk3" path="res://assets/Pixel Crawler/Environment/Structures/Stations/Cooking Station/Butchery/Butchery_01-Sheet.png" id="16_gkltp"]
+[ext_resource type="Texture2D" uid="uid://clw3ba1g6sq7h" path="res://assets/Pixel Crawler/Environment/Props/Static/Tools.png" id="17_bp8id"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hhxfa"]
 texture = ExtResource("13_xg5px")
@@ -370,6 +375,151 @@ physics_layer_0/collision_layer = 1
 sources/2 = SubResource("TileSetAtlasSource_gkltp")
 sources/0 = SubResource("TileSetAtlasSource_hhxfa")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hhxfa"]
+size = Vector2(43, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7n1hf"]
+atlas = ExtResource("15_hhxfa")
+region = Rect2(0, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_olh7b"]
+atlas = ExtResource("15_hhxfa")
+region = Rect2(48, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_slyx1"]
+atlas = ExtResource("15_hhxfa")
+region = Rect2(96, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vjvyu"]
+atlas = ExtResource("15_hhxfa")
+region = Rect2(144, 0, 48, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4npr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7n1hf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_olh7b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_slyx1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vjvyu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7n1hf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ysive"]
+atlas = ExtResource("7_olh7b")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_362jq"]
+atlas = ExtResource("7_olh7b")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_210kq"]
+atlas = ExtResource("7_olh7b")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l876y"]
+atlas = ExtResource("7_olh7b")
+region = Rect2(352, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g4npr"]
+atlas = ExtResource("7_olh7b")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_paaax"]
+atlas = ExtResource("7_olh7b")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g6k0t"]
+atlas = ExtResource("7_olh7b")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7mefh"]
+atlas = ExtResource("7_olh7b")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_phlqy"]
+atlas = ExtResource("7_olh7b")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jq5r2"]
+atlas = ExtResource("7_olh7b")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ihcs8"]
+atlas = ExtResource("7_olh7b")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ymtea"]
+atlas = ExtResource("7_olh7b")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ysive"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ysive")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_362jq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_210kq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l876y")
+}],
+"loop": false,
+"name": &"close",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g4npr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_paaax")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g6k0t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7mefh")
+}],
+"loop": true,
+"name": &"move",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_phlqy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jq5r2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ihcs8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ymtea")
+}],
+"loop": false,
+"name": &"open",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gkltp"]
+
 [sub_resource type="Resource" id="Resource_hehv2"]
 script = ExtResource("4_olh7b")
 use_player2_selected_character = false
@@ -454,47 +604,12 @@ tile_map_data = PackedByteArray("AAD8//n/AgACAAsAAAD8//r/AgACAAsAAAD8//v/AgACAAs
 tile_set = SubResource("TileSet_bp8id")
 
 [node name="TileMapLayerGrassClear" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAABAAAAAgADAAgAAAABAAEAAgADAAkAAAACAAAAAgABAAgAAAACAAEAAgABAAkAAAADAAEAAgACAAUAADAEAAIAAgADAAoAAAAEAAEAAgACAAUAADADAAIAAgACAAoAAAACAAIAAgACAAoAAAABAAIAAgACAAoAAAAAAAIAAgACAAoAAAAAAAEAAgADAAgAAAAJAP//AgADAAkAAAAIAP//AgACAAkAAAAIAAAAAgADAAoAAAAHAAAAAgADAAoAAAAHAAEAAgADAAoAAAAJAAAAAgADAAoAAAAJAAEAAgADAAoAAAAIAAEAAgADAAoAAAAHAAIAAgADAAoAAAAGAAIAAgADAAoAAAAFAAIAAgADAAoAAAAIAAIAAgADAAoAAAAJAAIAAgADAAoAAAD+//3/AgADAAoAAAD+//7/AgADAAoAAAD9//7/AgADAAoAAAD8//7/AgADAAoAAAD7//7/AgADAAoAAAD8//3/AgABAAkAAGD9//3/AgADAAoAAAD+////AgADAAoAAAD9////AgADAAoAAAD8////AgADAAoAAAD7////AgADAAoAAAAEAP3/AgADAAoAAAAEAPz/AgAEAAcAAFAFAPz/AgADAAoAAAAFAP3/AgADAAoAAAAGAPz/AgADAAoAAAAGAPv/AgADAAoAAAAHAPz/AgADAAoAAAAHAPv/AgADAAoAAAD3//n/AgADAAoAAAD4//n/AgAAAAgAAAD4//r/AgADAAoAAAD5//r/AgADAAoAAAD6//r/AgADAAoAAAD3//r/AgADAAoAAAD3//v/AgADAAoAAAD4//v/AgADAAoAAAD5//v/AgADAAoAAAD5//n/AgAAAAcAAGD3//z/AgACAAUAAAD2//r/AgADAAoAAAD2//n/AgADAAoAAAD+//z/AgABAAYAAGD6//n/AgABAAYAAGD7//r/AgADAAYAADAFAAEAAgACAAUAADAGAAEAAgAEAAgAAAAGAAAAAgADAAgAAAAHAP//AgADAAgAAAD//wIAAgABAAUAADD+/wIAAgABAAYAADADAP3/AgABAAYAADAEAP7/AgAEAAgAAGADAP7/AgADAAYAAAAFAP7/AgACAAkAADD7//3/AgACAAkAAAD6//7/AgACAAkAAGD6//3/AgADAAgAAAD6////AgACAAkAAGD7/wAAAgABAAkAADD6/wAAAgABAAgAADD8/wAAAgACAAUAAAD9/wAAAgACAAkAADD6//v/AgACAAUAAAD4//z/AgACAAUAAAD5//z/AgADAAYAAGD2//z/AgAAAAYAAAD2//v/AgACAAoAAAAJAP7/AgADAAgAAAAGAP3/AgAEAAgAADAGAP7/AgADAAgAADAHAP3/AgAEAAcAAGAIAPz/AgAEAAYAAGAIAP3/AgADAAYAAGAIAPv/AgADAAUAAGAHAPr/AgACAAUAADAIAPr/AgABAAYAAGAFAPv/AgABAAYAADD///3/AgADAAgAAFD///7/AgACAAkAAFD/////AgACAAUAAGD+/wAAAgACAAUAAAD//wAAAgABAAYAAAD7//v/AgABAAgAAFD9//z/AgACAAkAAAD3//j/AgABAAkAAAD2//j/AgABAAoAAAAGAPr/AgADAAgAAAD8//z/AgADAAYAAFD4//j/AgABAAgAAAA=")
+tile_map_data = PackedByteArray("AAABAAAAAgADAAgAAAABAAEAAgADAAkAAAACAAAAAgABAAgAAAACAAEAAgABAAkAAAADAAEAAgACAAUAADAEAAIAAgADAAoAAAAEAAEAAgACAAUAADADAAIAAgACAAoAAAACAAIAAgACAAoAAAABAAIAAgACAAoAAAAAAAIAAgACAAoAAAAAAAEAAgADAAgAAAAJAP//AgADAAkAAAAIAP//AgACAAkAAAAIAAAAAgADAAoAAAAHAAAAAgADAAoAAAAHAAEAAgADAAoAAAAJAAAAAgADAAoAAAAJAAEAAgADAAoAAAAIAAEAAgADAAoAAAAHAAIAAgADAAoAAAAGAAIAAgADAAoAAAAFAAIAAgADAAoAAAAIAAIAAgADAAoAAAAJAAIAAgADAAoAAAD+//3/AgADAAoAAAD+//7/AgADAAoAAAD9//7/AgADAAoAAAD8//7/AgADAAoAAAD7//7/AgADAAoAAAD8//3/AgABAAkAAGD9//3/AgADAAoAAAD+////AgADAAoAAAD9////AgADAAoAAAD8////AgADAAoAAAD7////AgADAAoAAAAEAP3/AgADAAoAAAAEAPz/AgAEAAcAAFAFAPz/AgADAAoAAAAFAP3/AgADAAoAAAAGAPz/AgADAAoAAAAGAPv/AgADAAoAAAAHAPz/AgADAAoAAAAHAPv/AgADAAoAAAD3//n/AgADAAoAAAD4//n/AgAAAAgAAAD4//r/AgADAAoAAAD5//r/AgADAAoAAAD6//r/AgADAAoAAAD3//r/AgADAAoAAAD3//v/AgADAAoAAAD4//v/AgADAAoAAAD5//v/AgADAAoAAAD5//n/AgAAAAcAAGD3//z/AgACAAUAAAD2//r/AgADAAoAAAD2//n/AgADAAoAAAD+//z/AgABAAYAAGD6//n/AgABAAYAAGD7//r/AgADAAYAADAFAAEAAgACAAUAADAGAAEAAgAEAAgAAAAGAAAAAgADAAgAAAAHAP//AgADAAgAAAD//wIAAgABAAUAADD+/wIAAgABAAYAADADAP3/AgABAAYAADAEAP7/AgAEAAgAAGADAP7/AgADAAYAAAAFAP7/AgACAAkAADD7//3/AgACAAkAAAD6//7/AgACAAkAAGD6//3/AgADAAgAAAD6////AgACAAkAAGD7/wAAAgABAAkAADD6/wAAAgALAAgAAAD8/wAAAgACAAUAAAD9/wAAAgACAAkAADD6//v/AgACAAUAAAD4//z/AgACAAUAAAD5//z/AgADAAYAAGD2//z/AgAAAAYAAAD2//v/AgACAAoAAAAJAP7/AgADAAgAAAAGAP3/AgAEAAgAADAGAP7/AgADAAgAADAHAP3/AgAEAAcAAGAIAPz/AgAEAAYAAGAIAP3/AgADAAYAAGAIAPv/AgADAAUAAGAHAPr/AgACAAUAADAIAPr/AgABAAYAAGAFAPv/AgABAAYAADD///3/AgADAAgAAFD///7/AgACAAkAAFD/////AgACAAUAAGD+/wAAAgACAAUAAAD//wAAAgABAAYAAAD7//v/AgABAAgAAFD9//z/AgACAAkAAAD3//j/AgABAAkAAAD2//j/AgABAAoAAAAGAPr/AgADAAgAAAD8//z/AgADAAYAAFD4//j/AgABAAgAAAD2/wAAAgAMAAkAAAD3/wAAAgAMAAUAADD4/wAAAgAMAAUAADD6/wIAAgAMAAUAAGD6/wEAAgAOAAcAADD5/wAAAgAMAAkAAAD5/wEAAgAMAAoAAAD5/wIAAgAMAAoAAAD4/wIAAgAMAAoAAAD4/wEAAgAMAAoAAAD3/wEAAgAMAAoAAAD3/wIAAgAMAAoAAAD2/wIAAgAMAAoAAAD2/wEAAgAMAAoAAAA=")
 tile_set = SubResource("TileSet_bp8id")
 
 [node name="TileMapLayerTrees" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAAHAP7/AAACAAAAAAAHAP//AAACAAEAAAAHAAAAAAACAAIAAAAHAAEAAAACAAMAAAAIAP7/AAADAAAAAAAIAP//AAADAAEAAAAIAAAAAAADAAIAAAAIAAEAAAADAAMAAAD3//b/AAACAAAAAAD3//f/AAACAAEAAAD3//j/AAACAAIAAAD3//n/AAACAAMAAAD4//b/AAADAAAAAAD4//f/AAADAAEAAAD4//j/AAADAAIAAAD4//n/AAADAAMAAADy//7/AAACAAAAAADy////AAACAAEAAADy/wAAAAACAAIAAADy/wEAAAACAAMAAADz//7/AAADAAAAAADz////AAADAAEAAADz/wAAAAADAAIAAADz/wEAAAADAAMAAAD6/wQAAAACAAAAAAD6/wUAAAACAAEAAAD6/wYAAAACAAIAAAD6/wcAAAACAAMAAAD7/wQAAAADAAAAAAD7/wUAAAADAAEAAAD7/wYAAAADAAIAAAD7/wcAAAADAAMAAAAEAAQAAAABAAIAAAAEAAUAAAABAAMAAAAFAAEAAAAEAAIAAAD3//3/AAAEAAIAAAD+//j/AAAEAAIAAAAIAPz/AAAIAAMAAAADAPn/AAAIAAMAAADz//v/AAAIAAMAAAALAAYAAAABAAIAAAALAAcAAAABAAMAAAANAAIAAAAGAAAAAAANAAMAAAAGAAEAAAANAAQAAAAGAAIAAAANAAUAAAAGAAMAAAAOAAIAAAAHAAAAAAAOAAMAAAAHAAEAAAAOAAQAAAAHAAIAAAAOAAUAAAAHAAMAAAAPAPf/AAAGAAAAAAAPAPj/AAAGAAEAAAAPAPn/AAAGAAIAAAAPAPr/AAAGAAMAAAAQAPf/AAAHAAAAAAAQAPj/AAAHAAEAAAAQAPn/AAAHAAIAAAAQAPr/AAAHAAMAAADv//b/AAAGAAAAAADv//f/AAAGAAEAAADv//j/AAAGAAIAAADv//n/AAAGAAMAAADw//b/AAAHAAAAAADw//f/AAAHAAEAAADw//j/AAAHAAIAAADw//n/AAAHAAMAAADz//H/AAAGAAAAAADz//L/AAAGAAEAAADz//P/AAAGAAIAAADz//T/AAAGAAMAAAD0//H/AAAHAAAAAAD0//L/AAAHAAEAAAD0//P/AAAHAAIAAAD0//T/AAAHAAMAAAAJAPL/AAAGAAAAAAAJAPP/AAAGAAEAAAAJAPT/AAAGAAIAAAAJAPX/AAAGAAMAAAAKAPL/AAAHAAAAAAAKAPP/AAAHAAEAAAAKAPT/AAAHAAIAAAAKAPX/AAAHAAMAAAD+//H/AAAGAAAAAAD+//L/AAAGAAEAAAD+//P/AAAGAAIAAAD+//T/AAAGAAMAAAD///H/AAAHAAAAAAD///L/AAAHAAEAAAD///P/AAAHAAIAAAD///T/AAAHAAMAAAARAP3/AAAGAAAAAAARAP7/AAAGAAEAAAARAP//AAAGAAIAAAARAAAAAAAGAAMAAAASAP3/AAAHAAAAAAASAP7/AAAHAAEAAAASAP//AAAHAAIAAAASAAAAAAAHAAMAAAANAPv/AAAFAAIAAAANAPz/AAAFAAMAAAAOAP7/AAAEAAIAAADw//3/AAAEAAIAAAAGAPT/AAAEAAIAAAA=")
 tile_set = SubResource("TileSet_bp8id")
-
-[node name="Entity" type="CharacterBody2D" parent="."]
-position = Vector2(102, -55)
-
-[node name="Player2AINPC" type="Node" parent="Entity" node_paths=PackedStringArray("tts_audio_player")]
-script = ExtResource("3_7n1hf")
-character_name = "Sensei"
-character_description = "You are the sensei. You are teaching the player to be the best version of themselves."
-tts_audio_player = NodePath("../AudioStreamPlayer")
-character_config = SubResource("Resource_hehv2")
-chat_config = SubResource("Resource_m77gi")
-tool_calls_function_definitions = SubResource("Resource_tukvp")
-metadata/_custom_type_script = "uid://bupnh0kqklshe"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Entity"]
-shape = SubResource("CircleShape2D_8avtb")
-
-[node name="Sprite2D" type="Sprite2D" parent="Entity"]
-texture = ExtResource("9_g6k0t")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Entity"]
-
-[node name="Player" type="CharacterBody2D" parent="."]
-position = Vector2(-108, -53)
-script = ExtResource("10_7mefh")
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(108, 53)
-zoom = Vector2(2, 2)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-shape = SubResource("CircleShape2D_ua84b")
-
-[node name="Sprite2D" type="Sprite2D" parent="Player"]
-texture = ExtResource("11_phlqy")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -508,7 +623,7 @@ grow_horizontal = 2
 grow_vertical = 0
 color = Color(0, 0, 0, 1)
 script = ExtResource("12_jq5r2")
-player_2ainpc = NodePath("../../Entity/Player2AINPC")
+player_2ainpc = NodePath("../../Area2D4/Entity/Player2AINPC")
 text_edit = NodePath("HBoxContainer/TextEdit")
 speech_bubble = NodePath("HBoxContainer/Speech Bubble")
 
@@ -526,3 +641,130 @@ size_flags_horizontal = 3
 
 [node name="Speech Bubble" parent="CanvasLayer/ChatRect/HBoxContainer" instance=ExtResource("13_ihcs8")]
 layout_mode = 2
+
+[node name="Cooker" type="Area2D" parent="."]
+position = Vector2(15, -74)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cooker"]
+position = Vector2(0.5, 2)
+shape = SubResource("RectangleShape2D_hhxfa")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Cooker"]
+sprite_frames = SubResource("SpriteFrames_g4npr")
+autoplay = "default"
+
+[node name="Pan" type="Area2D" parent="."]
+position = Vector2(-1, -86)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pan"]
+shape = SubResource("CircleShape2D_7n1hf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Pan"]
+sprite_frames = SubResource("SpriteFrames_ysive")
+animation = &"close"
+frame = 3
+
+[node name="Meat" type="Area2D" parent="."]
+position = Vector2(-58, -82)
+
+[node name="Sprite2D" type="Sprite2D" parent="Meat"]
+texture = ExtResource("16_gkltp")
+region_enabled = true
+region_rect = Rect2(0, 0, 63, 62)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Meat"]
+shape = SubResource("CircleShape2D_gkltp")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Carrot" type="Area2D" parent="Node2D"]
+position = Vector2(-139, 8)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Carrot"]
+texture = ExtResource("8_7n1hf")
+region_enabled = true
+region_rect = Rect2(80, 6, 15, 29)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Carrot"]
+shape = SubResource("CircleShape2D_gkltp")
+
+[node name="Carrot2" type="Area2D" parent="Node2D"]
+position = Vector2(-139, 31)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Carrot2"]
+texture = ExtResource("8_7n1hf")
+region_enabled = true
+region_rect = Rect2(80, 6, 15, 29)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Carrot2"]
+shape = SubResource("CircleShape2D_gkltp")
+
+[node name="Carrot3" type="Area2D" parent="Node2D"]
+position = Vector2(-118, 8)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Carrot3"]
+texture = ExtResource("8_7n1hf")
+region_enabled = true
+region_rect = Rect2(80, 6, 15, 29)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Carrot3"]
+shape = SubResource("CircleShape2D_gkltp")
+
+[node name="Carrot4" type="Area2D" parent="Node2D"]
+position = Vector2(-118, 31)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Carrot4"]
+texture = ExtResource("8_7n1hf")
+region_enabled = true
+region_rect = Rect2(80, 6, 15, 29)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Carrot4"]
+shape = SubResource("CircleShape2D_gkltp")
+
+[node name="Area2D4" type="Area2D" parent="."]
+position = Vector2(-67, 9)
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D4"]
+texture = ExtResource("17_bp8id")
+region_enabled = true
+region_rect = Rect2(0, 98, 16, 14)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4"]
+shape = SubResource("CircleShape2D_gkltp")
+
+[node name="Entity" type="CharacterBody2D" parent="Area2D4"]
+position = Vector2(169, -64)
+
+[node name="Player2AINPC" type="Node" parent="Area2D4/Entity" node_paths=PackedStringArray("tts_audio_player")]
+script = ExtResource("3_7n1hf")
+character_name = "Sensei"
+character_description = "You are the sensei. You are teaching the player to be the best version of themselves."
+character_system_message = "Match the player's mood. Be direct with your replies, but if the player is talkative then be talkative as well.
+This is now the second challenge.
+Tell the player he must click to iteract with the evironement and tools."
+tts_audio_player = NodePath("../AudioStreamPlayer")
+character_config = SubResource("Resource_hehv2")
+chat_config = SubResource("Resource_m77gi")
+tool_calls_function_definitions = SubResource("Resource_tukvp")
+metadata/_custom_type_script = "uid://bupnh0kqklshe"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4/Entity"]
+shape = SubResource("CircleShape2D_8avtb")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D4/Entity"]
+texture = ExtResource("9_g6k0t")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Area2D4/Entity"]
+
+[node name="Player" type="CharacterBody2D" parent="Area2D4"]
+position = Vector2(-41, -62)
+script = ExtResource("10_7mefh")
+
+[node name="Camera2D" type="Camera2D" parent="Area2D4/Player"]
+zoom = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4/Player"]
+shape = SubResource("CircleShape2D_ua84b")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D4/Player"]
+texture = ExtResource("11_phlqy")
