@@ -17,7 +17,8 @@ func _ready() -> void:
 					_send_text(text_edit.text)
 	)
 	
-	player_2ainpc.chat_received.connect(speech_bubble.play)
+	player_2ainpc.chat_received.connect(speech_bubble.set_message)
+	player_2ainpc.tts_began.connect(speech_bubble.play)
 	
 
 func _send_text(text):
