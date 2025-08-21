@@ -129,4 +129,4 @@ shape = SubResource("CircleShape2D_7n1hf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ysive")
-animation = &"open"
+animation = &"close"

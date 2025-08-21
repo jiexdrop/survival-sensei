@@ -718,7 +718,7 @@ size = Vector2(43, 24)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gkltp"]
 
-[sub_resource type="Resource" id="Resource_hehv2"]
+[sub_resource type="Resource" id="Resource_g4npr"]
 script = ExtResource("4_olh7b")
 use_player2_selected_character = false
 use_player2_selected_character_desired_index = -1
@@ -728,7 +728,7 @@ tts_speed = 1.0
 tts_default_language = 0
 tts_default_gender = 1
 
-[sub_resource type="Resource" id="Resource_27a66"]
+[sub_resource type="Resource" id="Resource_paaax"]
 script = ExtResource("5_slyx1")
 error_log_ui = true
 endpoint_chat = "http://127.0.0.1:4315/v1/chat/completions"
@@ -740,9 +740,9 @@ endpoint_stt_start = "http://127.0.0.1:4315/v1/stt/start"
 endpoint_stt_stop = "http://127.0.0.1:4315/v1/stt/stop"
 request_too_much_delay_seconds = 3.0
 
-[sub_resource type="Resource" id="Resource_m77gi"]
+[sub_resource type="Resource" id="Resource_g6k0t"]
 script = ExtResource("6_vjvyu")
-api = SubResource("Resource_27a66")
+api = SubResource("Resource_paaax")
 queue_check_interval_seconds = 2.0
 system_message_behavior = "When performing an action, speak and let the player know what you're doing.
 
@@ -781,9 +781,9 @@ tool_calls_choice = "Use a tool when deciding to complete a task. If you say you
 tool_calls_reply_message = "Got result from calling ${tool_call_name}: ${tool_call_reply}"
 tool_calls_message_optional_arg_description = "If you wish to say something while calling this function, populate this field with your speech. Leave string empty to not say anything/do it quietly. Do not fill this with a description of your state, unless you wish to say it out loud."
 
-[sub_resource type="Resource" id="Resource_tukvp"]
+[sub_resource type="Resource" id="Resource_7mefh"]
 Resource = null
-resource_path = "res://scenes/game_scene/levels/level_2.tscn::Resource_tukvp"
+resource_path = "res://scenes/game_scene/levels/level_2.tscn::Resource_7mefh"
 script = ExtResource("8_paaax")
 definitions = Array[ExtResource("7_g4npr")]([])
 
@@ -886,14 +886,14 @@ position = Vector2(102, -55)
 [node name="Player2AINPC" type="Node" parent="Entity" node_paths=PackedStringArray("tts_audio_player")]
 script = ExtResource("3_7n1hf")
 character_name = "Sensei"
-character_description = "Friendly Teacher."
+character_description = "Friendly Teacher"
 character_system_message = "Match the player's mood. Be direct with your replies, but if the player is talkative then be talkative as well.
 This is now the second challenge.
 Tell the player he must click to iteract with the evironement and tools."
 tts_audio_player = NodePath("../AudioStreamPlayer")
-character_config = SubResource("Resource_hehv2")
-chat_config = SubResource("Resource_m77gi")
-tool_calls_function_definitions = SubResource("Resource_tukvp")
+character_config = SubResource("Resource_g4npr")
+chat_config = SubResource("Resource_g6k0t")
+tool_calls_function_definitions = SubResource("Resource_7mefh")
 metadata/_custom_type_script = "uid://bupnh0kqklshe"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Entity"]
