@@ -13,12 +13,19 @@ const CHARACTERS_PER_SECOND = 20
 var full_message = ""
 var current_char_index = 0
 var reveal_timer = null
+var sensei_avatar: TextureRect  # Reference to the TextureRect
 
 func set_message(message: String):
 	full_message = message
 
+func set_sensei_avatar(rect: TextureRect):
+	sensei_avatar = rect
+	sensei_avatar.hide()
+
 func play():
 	self.show()
+	if sensei_avatar:
+		sensei_avatar.show()  # Show the TextureRect when speech starts
 	self.text = ""
 
 	current_char_index = 0
@@ -54,6 +61,11 @@ func _ready():
 	self.hide()
 	self.scroll_fit_content_height = true  # Adjust height to content
 
+func _on_timer_timeout():
+	if sensei_avatar:
+		sensei_avatar.hide()  # Hide the TextureRect when speech ends
+	self.hide()
+
 # Optional: Skip reveal animation if player wants to fast-forward
 func skip_reveal():
 	if reveal_timer != null and reveal_timer.is_stopped() == false:
@@ -69,3 +81,5 @@ func clear_bubble():
 	if reveal_timer != null:
 		reveal_timer.stop()
 	self.hide()
+	if sensei_avatar:
+		sensei_avatar.hide()

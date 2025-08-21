@@ -1,10 +1,11 @@
-[gd_scene load_steps=41 format=4 uid="uid://bj8ae0hidmukk"]
+[gd_scene load_steps=40 format=4 uid="uid://bj8ae0hidmukk"]
 
 [ext_resource type="Script" uid="uid://dka3qvssodgiw" path="res://scenes/game_scene/levels/level.gd" id="1_gkltp"]
 [ext_resource type="Texture2D" uid="uid://bwrv60mgqgl00" path="res://assets/Pixel Crawler/Environment/Tilesets/Floors_Tiles.png" id="2_bp8id"]
 [ext_resource type="Script" uid="uid://bupnh0kqklshe" path="res://addons/player2/Player2AINPC.gd" id="3_7n1hf"]
 [ext_resource type="Texture2D" uid="uid://cy6bf48qgmi1u" path="res://assets/Pixel Crawler/Environment/Props/Static/Vegetation.png" id="3_slyx1"]
 [ext_resource type="Script" uid="uid://bsi5tjg54www7" path="res://addons/player2/Player2AICharacterConfig.gd" id="4_olh7b"]
+[ext_resource type="PackedScene" uid="uid://hlmm40awxg4e" path="res://scenes/game_scene/chat_ui.tscn" id="5_g4npr"]
 [ext_resource type="Script" uid="uid://b6indg81ao1we" path="res://addons/player2/Player2APIConfig.gd" id="5_slyx1"]
 [ext_resource type="Script" uid="uid://bpvfdwoxmeah3" path="res://addons/player2/Player2AIChatConfig.gd" id="6_vjvyu"]
 [ext_resource type="Script" uid="uid://fpb2ysodtcuy" path="res://addons/player2/helpers/tool_call/ToolCallFunctionDefinition.gd" id="7_g4npr"]
@@ -15,9 +16,7 @@
 [ext_resource type="Script" uid="uid://dn11wvkta53ae" path="res://scenes/game_scene/levels/entities/player.gd" id="10_7mefh"]
 [ext_resource type="PackedScene" uid="uid://8xiuddx03r2n" path="res://scenes/game_scene/levels/entities/carrot.tscn" id="11_paaax"]
 [ext_resource type="Texture2D" uid="uid://bvlw422cpg71" path="res://dev_scenes/thirdparty/kenney/tiny-dungeon/Tiles/tile_0098.png" id="11_phlqy"]
-[ext_resource type="Script" uid="uid://c0cs0aiucn22f" path="res://scenes/game_scene/levels/chat_rect.gd" id="12_jq5r2"]
 [ext_resource type="Texture2D" uid="uid://cihjocpx12ntm" path="res://assets/Pixel Crawler/Environment/Props/Static/Pan.png" id="13_g4npr"]
-[ext_resource type="PackedScene" uid="uid://dojecawo8ra37" path="res://dev_scenes/rpg_example/speech_bubble.tscn" id="13_ihcs8"]
 [ext_resource type="Script" uid="uid://pvgsqtw8p321" path="res://scenes/game_scene/levels/pickable_pan.gd" id="13_paaax"]
 [ext_resource type="Texture2D" uid="uid://056enibgqv7i" path="res://assets/Pixel Crawler/Environment/Props/Static/Trees/Model_01/Size_02.png" id="13_xg5px"]
 [ext_resource type="Texture2D" uid="uid://tjaiwgd3exy" path="res://assets/Pixel Crawler/Environment/Structures/Stations/Cooking Station/Cooker/Cooker_03-Sheet.png" id="15_hhxfa"]
@@ -810,41 +809,14 @@ tile_set = SubResource("TileSet_bp8id")
 tile_map_data = PackedByteArray("AAAHAP7/AAACAAAAAAAHAP//AAACAAEAAAAHAAAAAAACAAIAAAAHAAEAAAACAAMAAAAIAP7/AAADAAAAAAAIAP//AAADAAEAAAAIAAAAAAADAAIAAAAIAAEAAAADAAMAAAD3//b/AAACAAAAAAD3//f/AAACAAEAAAD3//j/AAACAAIAAAD3//n/AAACAAMAAAD4//b/AAADAAAAAAD4//f/AAADAAEAAAD4//j/AAADAAIAAAD4//n/AAADAAMAAADy//7/AAACAAAAAADy////AAACAAEAAADy/wAAAAACAAIAAADy/wEAAAACAAMAAADz//7/AAADAAAAAADz////AAADAAEAAADz/wAAAAADAAIAAADz/wEAAAADAAMAAAD6/wQAAAACAAAAAAD6/wUAAAACAAEAAAD6/wYAAAACAAIAAAD6/wcAAAACAAMAAAD7/wQAAAADAAAAAAD7/wUAAAADAAEAAAD7/wYAAAADAAIAAAD7/wcAAAADAAMAAAAEAAQAAAABAAIAAAAEAAUAAAABAAMAAAAFAAEAAAAEAAIAAAD3//3/AAAEAAIAAAD+//j/AAAEAAIAAAAIAPz/AAAIAAMAAAADAPn/AAAIAAMAAADz//v/AAAIAAMAAAALAAYAAAABAAIAAAALAAcAAAABAAMAAAANAAIAAAAGAAAAAAANAAMAAAAGAAEAAAANAAQAAAAGAAIAAAANAAUAAAAGAAMAAAAOAAIAAAAHAAAAAAAOAAMAAAAHAAEAAAAOAAQAAAAHAAIAAAAOAAUAAAAHAAMAAAAPAPf/AAAGAAAAAAAPAPj/AAAGAAEAAAAPAPn/AAAGAAIAAAAPAPr/AAAGAAMAAAAQAPf/AAAHAAAAAAAQAPj/AAAHAAEAAAAQAPn/AAAHAAIAAAAQAPr/AAAHAAMAAADv//b/AAAGAAAAAADv//f/AAAGAAEAAADv//j/AAAGAAIAAADv//n/AAAGAAMAAADw//b/AAAHAAAAAADw//f/AAAHAAEAAADw//j/AAAHAAIAAADw//n/AAAHAAMAAADz//H/AAAGAAAAAADz//L/AAAGAAEAAADz//P/AAAGAAIAAADz//T/AAAGAAMAAAD0//H/AAAHAAAAAAD0//L/AAAHAAEAAAD0//P/AAAHAAIAAAD0//T/AAAHAAMAAAAJAPL/AAAGAAAAAAAJAPP/AAAGAAEAAAAJAPT/AAAGAAIAAAAJAPX/AAAGAAMAAAAKAPL/AAAHAAAAAAAKAPP/AAAHAAEAAAAKAPT/AAAHAAIAAAAKAPX/AAAHAAMAAAD+//H/AAAGAAAAAAD+//L/AAAGAAEAAAD+//P/AAAGAAIAAAD+//T/AAAGAAMAAAD///H/AAAHAAAAAAD///L/AAAHAAEAAAD///P/AAAHAAIAAAD///T/AAAHAAMAAAARAP3/AAAGAAAAAAARAP7/AAAGAAEAAAARAP//AAAGAAIAAAARAAAAAAAGAAMAAAASAP3/AAAHAAAAAAASAP7/AAAHAAEAAAASAP//AAAHAAIAAAASAAAAAAAHAAMAAAANAPv/AAAFAAIAAAANAPz/AAAFAAMAAAAOAP7/AAAEAAIAAADw//3/AAAEAAIAAAAGAPT/AAAEAAIAAAD6/wIAAQAPAAAAAADx/wQAAQATAAAAAAD0/wEAAQAWAAEAAADw/wAAAQAWAAEAAAAPAPz/AQATAAAAAAALAPr/AQATAAAAAADy//f/AQATAAAAAADx//n/AQADAAQAAADx//r/AQADAAUAAADy//n/AQAEAAQAAADy//r/AQAEAAUAAADz//n/AQAFAAQAAADz//r/AQAFAAUAAAD5//T/AQADAAQAAAD5//X/AQADAAUAAAD6//T/AQAEAAQAAAD6//X/AQAEAAUAAAD7//T/AQAFAAQAAAD7//X/AQAFAAUAAAADAPT/AQADAAAAAAADAPX/AQADAAEAAAAEAPT/AQAEAAAAAAAEAPX/AQAEAAEAAAD//wYAAQADAAQAAAD//wcAAQADAAUAAAAAAAYAAQAEAAQAAAAAAAcAAQAEAAUAAAABAAYAAQAFAAQAAAABAAcAAQAFAAUAAAD0/wQAAQAGAAAAAAD0/wUAAQAGAAEAAAD1/wQAAQAHAAAAAAD1/wUAAQAHAAEAAAA=")
 tile_set = SubResource("TileSet_bp8id")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="ChatUI" parent="." node_paths=PackedStringArray("player_2ainpc") instance=ExtResource("5_g4npr")]
+player_2ainpc = NodePath("../Entity/Player2AINPC")
 
-[node name="ChatRect" type="ColorRect" parent="CanvasLayer" node_paths=PackedStringArray("player_2ainpc", "text_edit", "speech_bubble")]
-custom_minimum_size = Vector2(300, 160)
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 0
-color = Color(0, 0, 0, 1)
-script = ExtResource("12_jq5r2")
-player_2ainpc = NodePath("../../Entity/Player2AINPC")
-text_edit = NodePath("HBoxContainer/TextEdit")
-speech_bubble = NodePath("HBoxContainer/Speech Bubble")
-
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/ChatRect"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="TextEdit" type="TextEdit" parent="CanvasLayer/ChatRect/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Speech Bubble" parent="CanvasLayer/ChatRect/HBoxContainer" instance=ExtResource("13_ihcs8")]
-layout_mode = 2
-
-[node name="Cooker" type="Area2D" parent="." node_paths=PackedStringArray("pan")]
+[node name="Cooker" type="Area2D" parent="." node_paths=PackedStringArray("pan", "player_2ainpc")]
 position = Vector2(15, -74)
 script = ExtResource("7_vjvyu")
 pan = NodePath("../Pan")
+player_2ainpc = NodePath("../Entity/Player2AINPC")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Cooker"]
 sprite_frames = SubResource("SpriteFrames_g4npr")
@@ -853,6 +825,9 @@ autoplay = "default"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cooker"]
 position = Vector2(0.5, 2)
 shape = SubResource("RectangleShape2D_hhxfa")
+
+[node name="ShakeTimer" type="Timer" parent="Cooker"]
+wait_time = 3.0
 
 [node name="Pan" parent="." instance=ExtResource("9_paaax")]
 position = Vector2(-1, -86)
@@ -911,7 +886,7 @@ position = Vector2(102, -55)
 [node name="Player2AINPC" type="Node" parent="Entity" node_paths=PackedStringArray("tts_audio_player")]
 script = ExtResource("3_7n1hf")
 character_name = "Sensei"
-character_description = "You are the sensei. You are teaching the player to be the best version of themselves."
+character_description = "Friendly Teacher."
 character_system_message = "Match the player's mood. Be direct with your replies, but if the player is talkative then be talkative as well.
 This is now the second challenge.
 Tell the player he must click to iteract with the evironement and tools."
@@ -943,4 +918,5 @@ shape = SubResource("CircleShape2D_ua84b")
 texture = ExtResource("11_phlqy")
 
 [connection signal="input_event" from="Cooker" to="Cooker" method="_on_input_event"]
+[connection signal="timeout" from="Cooker/ShakeTimer" to="Cooker" method="_on_shake_timer_timeout"]
 [connection signal="input_event" from="PickablePan" to="PickablePan" method="_on_input_event"]

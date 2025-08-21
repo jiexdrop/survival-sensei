@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://hlmm40awxg4e"]
+
+[ext_resource type="Script" uid="uid://c0cs0aiucn22f" path="res://scenes/game_scene/levels/chat_rect.gd" id="1_twe6b"]
+[ext_resource type="PackedScene" uid="uid://dojecawo8ra37" path="res://dev_scenes/rpg_example/speech_bubble.tscn" id="2_11581"]
+[ext_resource type="Texture2D" uid="uid://d3xik1lpyghjx" path="res://assets/Pixel Crawler/Entities/Pictures/kawaii-sensei.png" id="3_2igfb"]
+
+[node name="ChatUI" type="CanvasLayer" node_paths=PackedStringArray("text_edit", "speech_bubble", "sensei_avatar")]
+script = ExtResource("1_twe6b")
+text_edit = NodePath("ChatRect/HBoxContainer/TextEdit")
+speech_bubble = NodePath("ChatRect/HBoxContainer/Speech Bubble")
+sensei_avatar = NodePath("ChatRect/HBoxContainer/SenseiAvatar")
+
+[node name="ChatRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(300, 160)
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ChatRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextEdit" type="TextEdit" parent="ChatRect/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Type here to talk"
+
+[node name="Speech Bubble" parent="ChatRect/HBoxContainer" instance=ExtResource("2_11581")]
+layout_mode = 2
+
+[node name="SenseiAvatar" type="TextureRect" parent="ChatRect/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_2igfb")
+expand_mode = 3
