@@ -102,6 +102,7 @@ func handle_click():
 		PanState.SHAKEN:
 			# Carrots are done cooking
 			player_2ainpc.notify("The carrots are ready to serve!")
+			player_2ainpc.tts_ended.connect(level_2.win)
 
 func _on_shake_timer_timeout() -> void:
 	if current_state == PanState.COOKING:

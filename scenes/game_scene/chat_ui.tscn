@@ -34,6 +34,7 @@ mouse_filter = 2
 layout_mode = 2
 size_flags_horizontal = 3
 placeholder_text = "Type here to talk"
+wrap_mode = 1
 
 [node name="Speech Bubble" parent="ChatRect/HBoxContainer" instance=ExtResource("2_11581")]
 layout_mode = 2
