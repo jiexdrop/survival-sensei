@@ -1,0 +1,2955 @@
+[gd_scene load_steps=241 format=4 uid="uid://bkibtkfb8shkv"]
+
+[ext_resource type="Script" uid="uid://dka3qvssodgiw" path="res://scenes/game_scene/levels/level.gd" id="1_ivmic"]
+[ext_resource type="Texture2D" uid="uid://056enibgqv7i" path="res://assets/Pixel Crawler/Environment/Props/Static/Trees/Model_01/Size_02.png" id="2_52fqs"]
+[ext_resource type="Texture2D" uid="uid://cy6bf48qgmi1u" path="res://assets/Pixel Crawler/Environment/Props/Static/Vegetation.png" id="3_0o0d5"]
+[ext_resource type="Texture2D" uid="uid://bwrv60mgqgl00" path="res://assets/Pixel Crawler/Environment/Tilesets/Floors_Tiles.png" id="4_vpiom"]
+[ext_resource type="PackedScene" uid="uid://hlmm40awxg4e" path="res://scenes/game_scene/chat_ui.tscn" id="5_hgw2v"]
+[ext_resource type="PackedScene" uid="uid://cv0jyyaxrl07j" path="res://scenes/game_scene/levels/entities/pan.tscn" id="8_wek8d"]
+[ext_resource type="Texture2D" uid="uid://soghkxx4jk3" path="res://assets/Pixel Crawler/Environment/Structures/Stations/Cooking Station/Butchery/Butchery_01-Sheet.png" id="9_je085"]
+[ext_resource type="Script" uid="uid://ucfcol067vlx" path="res://scenes/game_scene/levels/ai_character.gd" id="9_qmvo6"]
+[ext_resource type="Texture2D" uid="uid://clw3ba1g6sq7h" path="res://assets/Pixel Crawler/Environment/Props/Static/Tools.png" id="11_tmtua"]
+[ext_resource type="Script" uid="uid://bupnh0kqklshe" path="res://addons/player2/Player2AINPC.gd" id="14_3nx1u"]
+[ext_resource type="Script" uid="uid://bsi5tjg54www7" path="res://addons/player2/Player2AICharacterConfig.gd" id="15_572fq"]
+[ext_resource type="Script" uid="uid://b6indg81ao1we" path="res://addons/player2/Player2APIConfig.gd" id="16_1r6ei"]
+[ext_resource type="Script" uid="uid://bpvfdwoxmeah3" path="res://addons/player2/Player2AIChatConfig.gd" id="17_yaoot"]
+[ext_resource type="Script" uid="uid://fpb2ysodtcuy" path="res://addons/player2/helpers/tool_call/ToolCallFunctionDefinition.gd" id="18_p15gx"]
+[ext_resource type="Script" uid="uid://dt7mt3t7a08me" path="res://addons/player2/helpers/tool_call/ToolCallFunctionDefinitions.gd" id="19_vytim"]
+[ext_resource type="Texture2D" uid="uid://co4cid6fxfr48" path="res://dev_scenes/thirdparty/kenney/tiny-dungeon/Tiles/tile_0096.png" id="20_oxkyo"]
+[ext_resource type="Script" uid="uid://dn11wvkta53ae" path="res://scenes/game_scene/levels/entities/player.gd" id="21_yea7t"]
+[ext_resource type="Texture2D" uid="uid://bvlw422cpg71" path="res://dev_scenes/thirdparty/kenney/tiny-dungeon/Tiles/tile_0098.png" id="22_apcst"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hhxfa"]
+texture = ExtResource("2_52fqs")
+2:0/0 = 0
+3:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+15:3/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+15:7/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vjvyu"]
+texture = ExtResource("3_0o0d5")
+0:0/0 = 0
+1:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+15:0/0 = 0
+16:0/0 = 0
+17:0/0 = 0
+18:0/0 = 0
+19:0/0 = 0
+20:0/0 = 0
+21:0/0 = 0
+22:0/0 = 0
+23:0/0 = 0
+24:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+18:1/0 = 0
+19:1/0 = 0
+20:1/0 = 0
+21:1/0 = 0
+22:1/0 = 0
+23:1/0 = 0
+24:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+15:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+12:10/0 = 0
+13:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+6:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+9:11/0 = 0
+10:11/0 = 0
+11:11/0 = 0
+12:11/0 = 0
+13:11/0 = 0
+14:11/0 = 0
+0:12/0 = 0
+1:12/0 = 0
+2:12/0 = 0
+3:12/0 = 0
+4:12/0 = 0
+5:12/0 = 0
+6:12/0 = 0
+0:13/0 = 0
+1:13/0 = 0
+2:13/0 = 0
+3:13/0 = 0
+4:13/0 = 0
+5:13/0 = 0
+6:13/0 = 0
+7:13/0 = 0
+8:13/0 = 0
+9:13/0 = 0
+0:14/0 = 0
+1:14/0 = 0
+2:14/0 = 0
+3:14/0 = 0
+4:14/0 = 0
+5:14/0 = 0
+6:14/0 = 0
+7:14/0 = 0
+8:14/0 = 0
+9:14/0 = 0
+10:14/0 = 0
+11:14/0 = 0
+0:15/0 = 0
+1:15/0 = 0
+2:15/0 = 0
+3:15/0 = 0
+4:15/0 = 0
+5:15/0 = 0
+6:15/0 = 0
+0:16/0 = 0
+1:16/0 = 0
+2:16/0 = 0
+3:16/0 = 0
+4:16/0 = 0
+5:16/0 = 0
+6:16/0 = 0
+7:16/0 = 0
+8:16/0 = 0
+9:16/0 = 0
+0:17/0 = 0
+1:17/0 = 0
+2:17/0 = 0
+3:17/0 = 0
+4:17/0 = 0
+5:17/0 = 0
+6:17/0 = 0
+7:17/0 = 0
+8:17/0 = 0
+9:17/0 = 0
+10:17/0 = 0
+11:17/0 = 0
+0:21/0 = 0
+1:21/0 = 0
+2:21/0 = 0
+3:21/0 = 0
+4:21/0 = 0
+5:21/0 = 0
+6:21/0 = 0
+7:21/0 = 0
+0:22/0 = 0
+1:22/0 = 0
+4:22/0 = 0
+5:22/0 = 0
+6:22/0 = 0
+7:22/0 = 0
+0:23/0 = 0
+1:23/0 = 0
+2:23/0 = 0
+3:23/0 = 0
+4:23/0 = 0
+5:23/0 = 0
+6:23/0 = 0
+7:23/0 = 0
+8:23/0 = 0
+9:23/0 = 0
+10:23/0 = 0
+11:23/0 = 0
+12:23/0 = 0
+13:23/0 = 0
+0:24/0 = 0
+1:24/0 = 0
+2:24/0 = 0
+3:24/0 = 0
+4:24/0 = 0
+5:24/0 = 0
+6:24/0 = 0
+7:24/0 = 0
+8:24/0 = 0
+9:24/0 = 0
+10:24/0 = 0
+11:24/0 = 0
+12:24/0 = 0
+13:24/0 = 0
+0:25/0 = 0
+1:25/0 = 0
+2:25/0 = 0
+3:25/0 = 0
+4:25/0 = 0
+5:25/0 = 0
+6:25/0 = 0
+7:25/0 = 0
+8:25/0 = 0
+9:25/0 = 0
+10:25/0 = 0
+11:25/0 = 0
+12:25/0 = 0
+13:25/0 = 0
+0:26/0 = 0
+1:26/0 = 0
+2:26/0 = 0
+3:26/0 = 0
+4:26/0 = 0
+5:26/0 = 0
+6:26/0 = 0
+7:26/0 = 0
+8:26/0 = 0
+9:26/0 = 0
+10:26/0 = 0
+11:26/0 = 0
+12:26/0 = 0
+13:26/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gkltp"]
+texture = ExtResource("4_vpiom")
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+16:0/0 = 0
+17:0/0 = 0
+18:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+16:1/0 = 0
+17:1/0 = 0
+18:1/0 = 0
+19:1/0 = 0
+0:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+16:2/0 = 0
+17:2/0 = 0
+17:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+18:2/0 = 0
+19:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+15:3/0 = 0
+16:3/0 = 0
+17:3/0 = 0
+18:3/0 = 0
+19:3/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+16:4/0 = 0
+17:4/0 = 0
+18:4/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+0:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+14:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+11:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+11:10/0 = 0
+12:10/0 = 0
+13:10/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+6:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+11:11/0 = 0
+12:11/0 = 0
+13:11/0 = 0
+1:12/0 = 0
+2:12/0 = 0
+3:12/0 = 0
+6:12/0 = 0
+7:12/0 = 0
+8:12/0 = 0
+0:13/0 = 0
+1:13/0 = 0
+2:13/0 = 0
+3:13/0 = 0
+4:13/0 = 0
+5:13/0 = 0
+6:13/0 = 0
+7:13/0 = 0
+8:13/0 = 0
+9:13/0 = 0
+0:14/0 = 0
+1:14/0 = 0
+2:14/0 = 0
+3:14/0 = 0
+4:14/0 = 0
+5:14/0 = 0
+6:14/0 = 0
+7:14/0 = 0
+8:14/0 = 0
+9:14/0 = 0
+0:15/0 = 0
+1:15/0 = 0
+2:15/0 = 0
+3:15/0 = 0
+4:15/0 = 0
+5:15/0 = 0
+6:15/0 = 0
+7:15/0 = 0
+8:15/0 = 0
+9:15/0 = 0
+1:16/0 = 0
+2:16/0 = 0
+3:16/0 = 0
+6:16/0 = 0
+7:16/0 = 0
+8:16/0 = 0
+1:17/0 = 0
+2:17/0 = 0
+3:17/0 = 0
+6:17/0 = 0
+7:17/0 = 0
+8:17/0 = 0
+0:18/0 = 0
+1:18/0 = 0
+2:18/0 = 0
+3:18/0 = 0
+4:18/0 = 0
+5:18/0 = 0
+6:18/0 = 0
+7:18/0 = 0
+8:18/0 = 0
+9:18/0 = 0
+0:19/0 = 0
+1:19/0 = 0
+2:19/0 = 0
+3:19/0 = 0
+4:19/0 = 0
+5:19/0 = 0
+6:19/0 = 0
+7:19/0 = 0
+8:19/0 = 0
+9:19/0 = 0
+0:20/0 = 0
+1:20/0 = 0
+2:20/0 = 0
+3:20/0 = 0
+4:20/0 = 0
+5:20/0 = 0
+6:20/0 = 0
+7:20/0 = 0
+8:20/0 = 0
+9:20/0 = 0
+1:21/0 = 0
+2:21/0 = 0
+3:21/0 = 0
+6:21/0 = 0
+7:21/0 = 0
+8:21/0 = 0
+0:22/0 = 0
+1:22/0 = 0
+2:22/0 = 0
+3:22/0 = 0
+4:22/0 = 0
+5:22/0 = 0
+6:22/0 = 0
+7:22/0 = 0
+8:22/0 = 0
+9:22/0 = 0
+0:23/0 = 0
+1:23/0 = 0
+2:23/0 = 0
+3:23/0 = 0
+4:23/0 = 0
+5:23/0 = 0
+6:23/0 = 0
+7:23/0 = 0
+8:23/0 = 0
+9:23/0 = 0
+0:24/0 = 0
+1:24/0 = 0
+2:24/0 = 0
+3:24/0 = 0
+4:24/0 = 0
+5:24/0 = 0
+6:24/0 = 0
+7:24/0 = 0
+8:24/0 = 0
+9:24/0 = 0
+0:25/0 = 0
+1:25/0 = 0
+2:25/0 = 0
+3:25/0 = 0
+4:25/0 = 0
+5:25/0 = 0
+6:25/0 = 0
+7:25/0 = 0
+8:25/0 = 0
+9:25/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_bp8id"]
+physics_layer_0/collision_layer = 1
+sources/2 = SubResource("TileSetAtlasSource_gkltp")
+sources/0 = SubResource("TileSetAtlasSource_hhxfa")
+sources/1 = SubResource("TileSetAtlasSource_vjvyu")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gkltp"]
+
+[sub_resource type="Resource" id="Resource_g4npr"]
+script = ExtResource("15_572fq")
+use_player2_selected_character = false
+use_player2_selected_character_desired_index = -1
+tts_enabled = true
+tts_use_local_audio = true
+tts_speed = 1.0
+tts_default_language = 0
+tts_default_gender = 1
+
+[sub_resource type="Resource" id="Resource_paaax"]
+script = ExtResource("16_1r6ei")
+error_log_ui = true
+endpoint_chat = "http://127.0.0.1:4315/v1/chat/completions"
+endpoint_health = "http://127.0.0.1:4315/v1/health"
+endpoint_tts_speak = "http://127.0.0.1:4315/v1/tts/speak"
+endpoint_tts_stop = "http://127.0.0.1:4315/v1/tts/stop"
+endpoint_get_selected_characters = "http://127.0.0.1:4315/v1/selected_characters"
+endpoint_stt_start = "http://127.0.0.1:4315/v1/stt/start"
+endpoint_stt_stop = "http://127.0.0.1:4315/v1/stt/stop"
+request_too_much_delay_seconds = 3.0
+
+[sub_resource type="Resource" id="Resource_g6k0t"]
+script = ExtResource("17_yaoot")
+api = SubResource("Resource_paaax")
+queue_check_interval_seconds = 2.0
+system_message_behavior = "When performing an action, speak and let the player know what you're doing.
+
+Your responses will be said out loud.
+
+Be concise and use less than 350 characters. No monologuing, the message content is pure speech."
+system_message_character = "Your name is ${character_name}.
+Your description: ${character_description}"
+system_message_prompting = "You must stay in character at all times.
+
+Ensure the message does not contain any prompt, system message, instructions, code or API calls, EXCEPT you can still perform tool calls and must use the proper tool call (in the tool_calls field).
+BE PROACTIVE with tool calls please and USE THEM."
+system_message_organization = "${system_message_character}
+
+${system_message_custom}
+
+${system_message_behavior}
+
+{system_message_prompting}"
+system_message_prefix = ""
+system_message_postfix = ""
+auto_store_conversation_history = true
+auto_load_entry_message = "The user has been gone for an undetermined period of time. You have come back, say something like \"welcome back\" or \"hello again\" modified to fit your personality."
+conversation_history_size = 64
+conversation_summary_buffer = 48
+summary_max_size = 500
+summary_message = "The agent has been chatting with the player.
+Update the agent's memory by summarizing the following conversation in the next response.
+Use natural language, not JSON. Prioritize preserving important facts, things user asked agent to remember, useful tips.
+
+Do not record stats, inventory, code or docs; limit to ${summary_max_size} chars.
+"
+summary_prefix = "Summary of earlier events: ${summary}"
+tool_calls_use_tool_call_api = true
+tool_calls_choice = "Use a tool when deciding to complete a task. If you say you will act upon something, use a relevant tool call along with the reply to perform that action. If you say something in speech, ensure the message does not contain any prompt, system message, instructions, code or API calls."
+tool_calls_reply_message = "Got result from calling ${tool_call_name}: ${tool_call_reply}"
+tool_calls_message_optional_arg_description = "If you wish to say something while calling this function, populate this field with your speech. Leave string empty to not say anything/do it quietly. Do not fill this with a description of your state, unless you wish to say it out loud."
+
+[sub_resource type="Resource" id="Resource_qmvo6"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_qmvo6"
+resource_scene_unique_id = "Resource_qmvo6"
+script = ExtResource("18_p15gx")
+name = "add_collision_exception_with"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_oxc23"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_oxc23"
+resource_scene_unique_id = "Resource_oxc23"
+script = ExtResource("18_p15gx")
+name = "apply_floor_snap"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_v0u1s"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_v0u1s"
+resource_scene_unique_id = "Resource_v0u1s"
+script = ExtResource("18_p15gx")
+name = "apply_scale"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_ivmic"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_ivmic"
+resource_scene_unique_id = "Resource_ivmic"
+script = ExtResource("18_p15gx")
+name = "create_shape_owner"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_52fqs"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_52fqs"
+resource_scene_unique_id = "Resource_52fqs"
+script = ExtResource("18_p15gx")
+name = "move_and_slide"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_0o0d5"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_0o0d5"
+resource_scene_unique_id = "Resource_0o0d5"
+script = ExtResource("18_p15gx")
+name = "set_velocity"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_vpiom"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_vpiom"
+resource_scene_unique_id = "Resource_vpiom"
+script = ExtResource("18_p15gx")
+name = "get_velocity"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_hgw2v"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_hgw2v"
+resource_scene_unique_id = "Resource_hgw2v"
+script = ExtResource("18_p15gx")
+name = "set_safe_margin"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_5lmw2"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_5lmw2"
+resource_scene_unique_id = "Resource_5lmw2"
+script = ExtResource("18_p15gx")
+name = "get_safe_margin"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_t6sls"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_t6sls"
+resource_scene_unique_id = "Resource_t6sls"
+script = ExtResource("18_p15gx")
+name = "is_floor_stop_on_slope_enabled"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_wek8d"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_wek8d"
+resource_scene_unique_id = "Resource_wek8d"
+script = ExtResource("18_p15gx")
+name = "set_floor_stop_on_slope_enabled"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_je085"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_je085"
+resource_scene_unique_id = "Resource_je085"
+script = ExtResource("18_p15gx")
+name = "set_floor_constant_speed_enabled"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_6wbux"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_6wbux"
+resource_scene_unique_id = "Resource_6wbux"
+script = ExtResource("18_p15gx")
+name = "is_floor_constant_speed_enabled"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_tmtua"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_tmtua"
+resource_scene_unique_id = "Resource_tmtua"
+script = ExtResource("18_p15gx")
+name = "set_floor_block_on_wall_enabled"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_nfkwa"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_nfkwa"
+resource_scene_unique_id = "Resource_nfkwa"
+script = ExtResource("18_p15gx")
+name = "is_floor_block_on_wall_enabled"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_ubkcs"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_ubkcs"
+resource_scene_unique_id = "Resource_ubkcs"
+script = ExtResource("18_p15gx")
+name = "set_slide_on_ceiling_enabled"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_3nx1u"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_3nx1u"
+resource_scene_unique_id = "Resource_3nx1u"
+script = ExtResource("18_p15gx")
+name = "is_slide_on_ceiling_enabled"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_572fq"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_572fq"
+resource_scene_unique_id = "Resource_572fq"
+script = ExtResource("18_p15gx")
+name = "set_platform_floor_layers"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_1r6ei"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_1r6ei"
+resource_scene_unique_id = "Resource_1r6ei"
+script = ExtResource("18_p15gx")
+name = "get_platform_floor_layers"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_yaoot"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_yaoot"
+resource_scene_unique_id = "Resource_yaoot"
+script = ExtResource("18_p15gx")
+name = "set_platform_wall_layers"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_p15gx"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_p15gx"
+resource_scene_unique_id = "Resource_p15gx"
+script = ExtResource("18_p15gx")
+name = "get_platform_wall_layers"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_vytim"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_vytim"
+resource_scene_unique_id = "Resource_vytim"
+script = ExtResource("18_p15gx")
+name = "get_max_slides"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_oxkyo"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_oxkyo"
+resource_scene_unique_id = "Resource_oxkyo"
+script = ExtResource("18_p15gx")
+name = "set_max_slides"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_yea7t"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_yea7t"
+resource_scene_unique_id = "Resource_yea7t"
+script = ExtResource("18_p15gx")
+name = "get_floor_max_angle"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_apcst"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_apcst"
+resource_scene_unique_id = "Resource_apcst"
+script = ExtResource("18_p15gx")
+name = "set_floor_max_angle"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_75b5q"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_75b5q"
+resource_scene_unique_id = "Resource_75b5q"
+script = ExtResource("18_p15gx")
+name = "get_floor_snap_length"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_g3btv"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_g3btv"
+resource_scene_unique_id = "Resource_g3btv"
+script = ExtResource("18_p15gx")
+name = "set_floor_snap_length"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_de7vr"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_de7vr"
+resource_scene_unique_id = "Resource_de7vr"
+script = ExtResource("18_p15gx")
+name = "get_wall_min_slide_angle"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_rk5lx"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_rk5lx"
+resource_scene_unique_id = "Resource_rk5lx"
+script = ExtResource("18_p15gx")
+name = "set_wall_min_slide_angle"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_qml4k"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_qml4k"
+resource_scene_unique_id = "Resource_qml4k"
+script = ExtResource("18_p15gx")
+name = "get_up_direction"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_sa4bd"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_sa4bd"
+resource_scene_unique_id = "Resource_sa4bd"
+script = ExtResource("18_p15gx")
+name = "set_up_direction"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_5mkpk"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_5mkpk"
+resource_scene_unique_id = "Resource_5mkpk"
+script = ExtResource("18_p15gx")
+name = "set_motion_mode"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_sbij3"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_sbij3"
+resource_scene_unique_id = "Resource_sbij3"
+script = ExtResource("18_p15gx")
+name = "get_motion_mode"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_3gwi3"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_3gwi3"
+resource_scene_unique_id = "Resource_3gwi3"
+script = ExtResource("18_p15gx")
+name = "set_platform_on_leave"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_q1o3g"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_q1o3g"
+resource_scene_unique_id = "Resource_q1o3g"
+script = ExtResource("18_p15gx")
+name = "get_platform_on_leave"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_rouv3"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_rouv3"
+resource_scene_unique_id = "Resource_rouv3"
+script = ExtResource("18_p15gx")
+name = "is_on_floor"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_y4iy0"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_y4iy0"
+resource_scene_unique_id = "Resource_y4iy0"
+script = ExtResource("18_p15gx")
+name = "is_on_floor_only"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_pbyug"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_pbyug"
+resource_scene_unique_id = "Resource_pbyug"
+script = ExtResource("18_p15gx")
+name = "is_on_ceiling"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_nwgcx"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_nwgcx"
+resource_scene_unique_id = "Resource_nwgcx"
+script = ExtResource("18_p15gx")
+name = "is_on_ceiling_only"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_5qkkd"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_5qkkd"
+resource_scene_unique_id = "Resource_5qkkd"
+script = ExtResource("18_p15gx")
+name = "is_on_wall"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_he170"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_he170"
+resource_scene_unique_id = "Resource_he170"
+script = ExtResource("18_p15gx")
+name = "is_on_wall_only"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_rholy"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_rholy"
+resource_scene_unique_id = "Resource_rholy"
+script = ExtResource("18_p15gx")
+name = "get_floor_normal"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_xmgw7"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_xmgw7"
+resource_scene_unique_id = "Resource_xmgw7"
+script = ExtResource("18_p15gx")
+name = "get_wall_normal"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_b8x37"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_b8x37"
+resource_scene_unique_id = "Resource_b8x37"
+script = ExtResource("18_p15gx")
+name = "get_last_motion"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_w4hav"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_w4hav"
+resource_scene_unique_id = "Resource_w4hav"
+script = ExtResource("18_p15gx")
+name = "get_position_delta"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_4x11h"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_4x11h"
+resource_scene_unique_id = "Resource_4x11h"
+script = ExtResource("18_p15gx")
+name = "get_real_velocity"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_fo7wn"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_fo7wn"
+resource_scene_unique_id = "Resource_fo7wn"
+script = ExtResource("18_p15gx")
+name = "get_floor_angle"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_d7svp"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_d7svp"
+resource_scene_unique_id = "Resource_d7svp"
+script = ExtResource("18_p15gx")
+name = "get_platform_velocity"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_8xykc"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_8xykc"
+resource_scene_unique_id = "Resource_8xykc"
+script = ExtResource("18_p15gx")
+name = "get_slide_collision_count"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_hessl"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_hessl"
+resource_scene_unique_id = "Resource_hessl"
+script = ExtResource("18_p15gx")
+name = "get_slide_collision"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_ir50b"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_ir50b"
+resource_scene_unique_id = "Resource_ir50b"
+script = ExtResource("18_p15gx")
+name = "get_last_slide_collision"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_wo0lf"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_wo0lf"
+resource_scene_unique_id = "Resource_wo0lf"
+script = ExtResource("18_p15gx")
+name = "move_and_collide"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_yj1re"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_yj1re"
+resource_scene_unique_id = "Resource_yj1re"
+script = ExtResource("18_p15gx")
+name = "test_move"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_qar7u"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_qar7u"
+resource_scene_unique_id = "Resource_qar7u"
+script = ExtResource("18_p15gx")
+name = "get_gravity"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_2hid7"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_2hid7"
+resource_scene_unique_id = "Resource_2hid7"
+script = ExtResource("18_p15gx")
+name = "get_collision_exceptions"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_lukgg"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_lukgg"
+resource_scene_unique_id = "Resource_lukgg"
+script = ExtResource("18_p15gx")
+name = "remove_collision_exception_with"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_8iq0r"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_8iq0r"
+resource_scene_unique_id = "Resource_8iq0r"
+script = ExtResource("18_p15gx")
+name = "get_rid"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_ee7vy"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_ee7vy"
+resource_scene_unique_id = "Resource_ee7vy"
+script = ExtResource("18_p15gx")
+name = "set_collision_layer"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_faqni"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_faqni"
+resource_scene_unique_id = "Resource_faqni"
+script = ExtResource("18_p15gx")
+name = "get_collision_layer"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_2a43p"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_2a43p"
+resource_scene_unique_id = "Resource_2a43p"
+script = ExtResource("18_p15gx")
+name = "set_collision_mask"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_3ikgc"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_3ikgc"
+resource_scene_unique_id = "Resource_3ikgc"
+script = ExtResource("18_p15gx")
+name = "get_collision_mask"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_5jcjd"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_5jcjd"
+resource_scene_unique_id = "Resource_5jcjd"
+script = ExtResource("18_p15gx")
+name = "set_collision_layer_value"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_58sw8"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_58sw8"
+resource_scene_unique_id = "Resource_58sw8"
+script = ExtResource("18_p15gx")
+name = "get_collision_layer_value"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_87su7"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_87su7"
+resource_scene_unique_id = "Resource_87su7"
+script = ExtResource("18_p15gx")
+name = "set_collision_mask_value"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_c6b47"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_c6b47"
+resource_scene_unique_id = "Resource_c6b47"
+script = ExtResource("18_p15gx")
+name = "get_collision_mask_value"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_lcmwv"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_lcmwv"
+resource_scene_unique_id = "Resource_lcmwv"
+script = ExtResource("18_p15gx")
+name = "set_collision_priority"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_qdllh"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_qdllh"
+resource_scene_unique_id = "Resource_qdllh"
+script = ExtResource("18_p15gx")
+name = "get_collision_priority"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_4k5ha"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_4k5ha"
+resource_scene_unique_id = "Resource_4k5ha"
+script = ExtResource("18_p15gx")
+name = "set_disable_mode"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_7ive0"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_7ive0"
+resource_scene_unique_id = "Resource_7ive0"
+script = ExtResource("18_p15gx")
+name = "get_disable_mode"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_vgqnp"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_vgqnp"
+resource_scene_unique_id = "Resource_vgqnp"
+script = ExtResource("18_p15gx")
+name = "set_pickable"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_u61fl"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_u61fl"
+resource_scene_unique_id = "Resource_u61fl"
+script = ExtResource("18_p15gx")
+name = "is_pickable"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_i01nl"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_i01nl"
+resource_scene_unique_id = "Resource_i01nl"
+script = ExtResource("18_p15gx")
+name = "remove_shape_owner"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_n1512"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_n1512"
+resource_scene_unique_id = "Resource_n1512"
+script = ExtResource("18_p15gx")
+name = "get_shape_owners"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_tse4b"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_tse4b"
+resource_scene_unique_id = "Resource_tse4b"
+script = ExtResource("18_p15gx")
+name = "shape_owner_set_transform"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_bmyut"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_bmyut"
+resource_scene_unique_id = "Resource_bmyut"
+script = ExtResource("18_p15gx")
+name = "shape_owner_get_transform"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_db1he"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_db1he"
+resource_scene_unique_id = "Resource_db1he"
+script = ExtResource("18_p15gx")
+name = "shape_owner_get_owner"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_r3v76"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_r3v76"
+resource_scene_unique_id = "Resource_r3v76"
+script = ExtResource("18_p15gx")
+name = "shape_owner_set_disabled"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_yhf3w"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_yhf3w"
+resource_scene_unique_id = "Resource_yhf3w"
+script = ExtResource("18_p15gx")
+name = "is_shape_owner_disabled"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_b3a31"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_b3a31"
+resource_scene_unique_id = "Resource_b3a31"
+script = ExtResource("18_p15gx")
+name = "shape_owner_set_one_way_collision"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_cwgud"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_cwgud"
+resource_scene_unique_id = "Resource_cwgud"
+script = ExtResource("18_p15gx")
+name = "is_shape_owner_one_way_collision_enabled"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_hvomc"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_hvomc"
+resource_scene_unique_id = "Resource_hvomc"
+script = ExtResource("18_p15gx")
+name = "shape_owner_set_one_way_collision_margin"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_krd6w"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_krd6w"
+resource_scene_unique_id = "Resource_krd6w"
+script = ExtResource("18_p15gx")
+name = "get_shape_owner_one_way_collision_margin"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_b7nn0"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_b7nn0"
+resource_scene_unique_id = "Resource_b7nn0"
+script = ExtResource("18_p15gx")
+name = "shape_owner_add_shape"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_nl0d3"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_nl0d3"
+resource_scene_unique_id = "Resource_nl0d3"
+script = ExtResource("18_p15gx")
+name = "shape_owner_get_shape_count"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_iqgkv"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_iqgkv"
+resource_scene_unique_id = "Resource_iqgkv"
+script = ExtResource("18_p15gx")
+name = "shape_owner_get_shape"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_cc2g5"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_cc2g5"
+resource_scene_unique_id = "Resource_cc2g5"
+script = ExtResource("18_p15gx")
+name = "shape_owner_get_shape_index"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_k4cxd"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_k4cxd"
+resource_scene_unique_id = "Resource_k4cxd"
+script = ExtResource("18_p15gx")
+name = "shape_owner_remove_shape"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_8ycn5"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_8ycn5"
+resource_scene_unique_id = "Resource_8ycn5"
+script = ExtResource("18_p15gx")
+name = "shape_owner_clear_shapes"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_vs8c2"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_vs8c2"
+resource_scene_unique_id = "Resource_vs8c2"
+script = ExtResource("18_p15gx")
+name = "shape_find_owner"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_ly4py"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_ly4py"
+resource_scene_unique_id = "Resource_ly4py"
+script = ExtResource("18_p15gx")
+name = "set_position"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_sa4xo"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_sa4xo"
+resource_scene_unique_id = "Resource_sa4xo"
+script = ExtResource("18_p15gx")
+name = "set_rotation"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_uy5yv"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_uy5yv"
+resource_scene_unique_id = "Resource_uy5yv"
+script = ExtResource("18_p15gx")
+name = "set_rotation_degrees"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_j1c12"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_j1c12"
+resource_scene_unique_id = "Resource_j1c12"
+script = ExtResource("18_p15gx")
+name = "set_skew"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_bm76i"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_bm76i"
+resource_scene_unique_id = "Resource_bm76i"
+script = ExtResource("18_p15gx")
+name = "set_scale"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_ufg86"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_ufg86"
+resource_scene_unique_id = "Resource_ufg86"
+script = ExtResource("18_p15gx")
+name = "get_position"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_8glfc"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_8glfc"
+resource_scene_unique_id = "Resource_8glfc"
+script = ExtResource("18_p15gx")
+name = "get_rotation"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_h4usu"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_h4usu"
+resource_scene_unique_id = "Resource_h4usu"
+script = ExtResource("18_p15gx")
+name = "get_rotation_degrees"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_auy47"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_auy47"
+resource_scene_unique_id = "Resource_auy47"
+script = ExtResource("18_p15gx")
+name = "get_skew"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_4r6p3"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_4r6p3"
+resource_scene_unique_id = "Resource_4r6p3"
+script = ExtResource("18_p15gx")
+name = "get_scale"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_m03i4"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_m03i4"
+resource_scene_unique_id = "Resource_m03i4"
+script = ExtResource("18_p15gx")
+name = "rotate"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_norje"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_norje"
+resource_scene_unique_id = "Resource_norje"
+script = ExtResource("18_p15gx")
+name = "move_local_x"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_15soc"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_15soc"
+resource_scene_unique_id = "Resource_15soc"
+script = ExtResource("18_p15gx")
+name = "move_local_y"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_uhc4y"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_uhc4y"
+resource_scene_unique_id = "Resource_uhc4y"
+script = ExtResource("18_p15gx")
+name = "translate"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_dffty"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_dffty"
+resource_scene_unique_id = "Resource_dffty"
+script = ExtResource("18_p15gx")
+name = "global_translate"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_iu82w"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_iu82w"
+resource_scene_unique_id = "Resource_iu82w"
+script = ExtResource("18_p15gx")
+name = "set_global_position"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_hirmo"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_hirmo"
+resource_scene_unique_id = "Resource_hirmo"
+script = ExtResource("18_p15gx")
+name = "get_global_position"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_6u5l3"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_6u5l3"
+resource_scene_unique_id = "Resource_6u5l3"
+script = ExtResource("18_p15gx")
+name = "set_global_rotation"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_ey7ov"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_ey7ov"
+resource_scene_unique_id = "Resource_ey7ov"
+script = ExtResource("18_p15gx")
+name = "set_global_rotation_degrees"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_5m34g"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_5m34g"
+resource_scene_unique_id = "Resource_5m34g"
+script = ExtResource("18_p15gx")
+name = "get_global_rotation"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_m1uln"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_m1uln"
+resource_scene_unique_id = "Resource_m1uln"
+script = ExtResource("18_p15gx")
+name = "get_global_rotation_degrees"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_t5jgk"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_t5jgk"
+resource_scene_unique_id = "Resource_t5jgk"
+script = ExtResource("18_p15gx")
+name = "set_global_skew"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_0fk37"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_0fk37"
+resource_scene_unique_id = "Resource_0fk37"
+script = ExtResource("18_p15gx")
+name = "get_global_skew"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_6v7p7"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_6v7p7"
+resource_scene_unique_id = "Resource_6v7p7"
+script = ExtResource("18_p15gx")
+name = "set_global_scale"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_h1pqw"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_h1pqw"
+resource_scene_unique_id = "Resource_h1pqw"
+script = ExtResource("18_p15gx")
+name = "get_global_scale"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_kl3qx"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_kl3qx"
+resource_scene_unique_id = "Resource_kl3qx"
+script = ExtResource("18_p15gx")
+name = "set_transform"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_85bqc"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_85bqc"
+resource_scene_unique_id = "Resource_85bqc"
+script = ExtResource("18_p15gx")
+name = "set_global_transform"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_txc1q"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_txc1q"
+resource_scene_unique_id = "Resource_txc1q"
+script = ExtResource("18_p15gx")
+name = "look_at"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_7jy8s"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_7jy8s"
+resource_scene_unique_id = "Resource_7jy8s"
+script = ExtResource("18_p15gx")
+name = "get_angle_to"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_3pk3q"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_3pk3q"
+resource_scene_unique_id = "Resource_3pk3q"
+script = ExtResource("18_p15gx")
+name = "to_local"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_yeoga"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_yeoga"
+resource_scene_unique_id = "Resource_yeoga"
+script = ExtResource("18_p15gx")
+name = "to_global"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_j5j8g"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_j5j8g"
+resource_scene_unique_id = "Resource_j5j8g"
+script = ExtResource("18_p15gx")
+name = "get_relative_transform_to_parent"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_i5rh4"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_i5rh4"
+resource_scene_unique_id = "Resource_i5rh4"
+script = ExtResource("18_p15gx")
+name = "get_canvas_item"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_0p2oo"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_0p2oo"
+resource_scene_unique_id = "Resource_0p2oo"
+script = ExtResource("18_p15gx")
+name = "set_visible"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_j3rea"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_j3rea"
+resource_scene_unique_id = "Resource_j3rea"
+script = ExtResource("18_p15gx")
+name = "is_visible"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_57nyr"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_57nyr"
+resource_scene_unique_id = "Resource_57nyr"
+script = ExtResource("18_p15gx")
+name = "is_visible_in_tree"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_1h3ly"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_1h3ly"
+resource_scene_unique_id = "Resource_1h3ly"
+script = ExtResource("18_p15gx")
+name = "show"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_v7kbb"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_v7kbb"
+resource_scene_unique_id = "Resource_v7kbb"
+script = ExtResource("18_p15gx")
+name = "hide"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_run2q"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_run2q"
+resource_scene_unique_id = "Resource_run2q"
+script = ExtResource("18_p15gx")
+name = "queue_redraw"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_csb4k"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_csb4k"
+resource_scene_unique_id = "Resource_csb4k"
+script = ExtResource("18_p15gx")
+name = "move_to_front"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_542fc"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_542fc"
+resource_scene_unique_id = "Resource_542fc"
+script = ExtResource("18_p15gx")
+name = "set_as_top_level"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_q4136"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_q4136"
+resource_scene_unique_id = "Resource_q4136"
+script = ExtResource("18_p15gx")
+name = "is_set_as_top_level"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_6gwxd"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_6gwxd"
+resource_scene_unique_id = "Resource_6gwxd"
+script = ExtResource("18_p15gx")
+name = "set_light_mask"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_ul541"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_ul541"
+resource_scene_unique_id = "Resource_ul541"
+script = ExtResource("18_p15gx")
+name = "get_light_mask"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_1hr3p"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_1hr3p"
+resource_scene_unique_id = "Resource_1hr3p"
+script = ExtResource("18_p15gx")
+name = "set_modulate"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_x1tub"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_x1tub"
+resource_scene_unique_id = "Resource_x1tub"
+script = ExtResource("18_p15gx")
+name = "get_modulate"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_qlx4m"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_qlx4m"
+resource_scene_unique_id = "Resource_qlx4m"
+script = ExtResource("18_p15gx")
+name = "set_self_modulate"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_5gbev"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_5gbev"
+resource_scene_unique_id = "Resource_5gbev"
+script = ExtResource("18_p15gx")
+name = "get_self_modulate"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_iv0fu"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_iv0fu"
+resource_scene_unique_id = "Resource_iv0fu"
+script = ExtResource("18_p15gx")
+name = "set_z_index"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_mkvmn"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_mkvmn"
+resource_scene_unique_id = "Resource_mkvmn"
+script = ExtResource("18_p15gx")
+name = "get_z_index"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_du2ho"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_du2ho"
+resource_scene_unique_id = "Resource_du2ho"
+script = ExtResource("18_p15gx")
+name = "set_z_as_relative"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_tee7v"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_tee7v"
+resource_scene_unique_id = "Resource_tee7v"
+script = ExtResource("18_p15gx")
+name = "is_z_relative"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_wudkq"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_wudkq"
+resource_scene_unique_id = "Resource_wudkq"
+script = ExtResource("18_p15gx")
+name = "set_y_sort_enabled"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_mucky"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_mucky"
+resource_scene_unique_id = "Resource_mucky"
+script = ExtResource("18_p15gx")
+name = "is_y_sort_enabled"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_5r1sm"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_5r1sm"
+resource_scene_unique_id = "Resource_5r1sm"
+script = ExtResource("18_p15gx")
+name = "set_draw_behind_parent"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_3irs0"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_3irs0"
+resource_scene_unique_id = "Resource_3irs0"
+script = ExtResource("18_p15gx")
+name = "is_draw_behind_parent_enabled"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_l1pjv"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_l1pjv"
+resource_scene_unique_id = "Resource_l1pjv"
+script = ExtResource("18_p15gx")
+name = "draw_line"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_ard0s"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_ard0s"
+resource_scene_unique_id = "Resource_ard0s"
+script = ExtResource("18_p15gx")
+name = "draw_dashed_line"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_50ffy"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_50ffy"
+resource_scene_unique_id = "Resource_50ffy"
+script = ExtResource("18_p15gx")
+name = "draw_polyline"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_j4yxa"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_j4yxa"
+resource_scene_unique_id = "Resource_j4yxa"
+script = ExtResource("18_p15gx")
+name = "draw_polyline_colors"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_yj7pm"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_yj7pm"
+resource_scene_unique_id = "Resource_yj7pm"
+script = ExtResource("18_p15gx")
+name = "draw_arc"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_741u6"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_741u6"
+resource_scene_unique_id = "Resource_741u6"
+script = ExtResource("18_p15gx")
+name = "draw_multiline"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_0kwee"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_0kwee"
+resource_scene_unique_id = "Resource_0kwee"
+script = ExtResource("18_p15gx")
+name = "draw_multiline_colors"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_wv2im"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_wv2im"
+resource_scene_unique_id = "Resource_wv2im"
+script = ExtResource("18_p15gx")
+name = "draw_rect"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_xrt3g"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_xrt3g"
+resource_scene_unique_id = "Resource_xrt3g"
+script = ExtResource("18_p15gx")
+name = "draw_circle"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_0t1x2"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_0t1x2"
+resource_scene_unique_id = "Resource_0t1x2"
+script = ExtResource("18_p15gx")
+name = "draw_texture"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_bn0pk"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_bn0pk"
+resource_scene_unique_id = "Resource_bn0pk"
+script = ExtResource("18_p15gx")
+name = "draw_texture_rect"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_xdx5m"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_xdx5m"
+resource_scene_unique_id = "Resource_xdx5m"
+script = ExtResource("18_p15gx")
+name = "draw_texture_rect_region"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_5q5n6"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_5q5n6"
+resource_scene_unique_id = "Resource_5q5n6"
+script = ExtResource("18_p15gx")
+name = "draw_msdf_texture_rect_region"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_rabnj"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_rabnj"
+resource_scene_unique_id = "Resource_rabnj"
+script = ExtResource("18_p15gx")
+name = "draw_lcd_texture_rect_region"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_48xhk"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_48xhk"
+resource_scene_unique_id = "Resource_48xhk"
+script = ExtResource("18_p15gx")
+name = "draw_style_box"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_70f4p"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_70f4p"
+resource_scene_unique_id = "Resource_70f4p"
+script = ExtResource("18_p15gx")
+name = "draw_primitive"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_4hvsm"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_4hvsm"
+resource_scene_unique_id = "Resource_4hvsm"
+script = ExtResource("18_p15gx")
+name = "draw_polygon"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_840pa"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_840pa"
+resource_scene_unique_id = "Resource_840pa"
+script = ExtResource("18_p15gx")
+name = "draw_colored_polygon"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_nwjug"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_nwjug"
+resource_scene_unique_id = "Resource_nwjug"
+script = ExtResource("18_p15gx")
+name = "draw_string"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_676ca"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_676ca"
+resource_scene_unique_id = "Resource_676ca"
+script = ExtResource("18_p15gx")
+name = "draw_multiline_string"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_tplkb"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_tplkb"
+resource_scene_unique_id = "Resource_tplkb"
+script = ExtResource("18_p15gx")
+name = "draw_string_outline"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_42ep6"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_42ep6"
+resource_scene_unique_id = "Resource_42ep6"
+script = ExtResource("18_p15gx")
+name = "draw_multiline_string_outline"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_5dyx8"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_5dyx8"
+resource_scene_unique_id = "Resource_5dyx8"
+script = ExtResource("18_p15gx")
+name = "draw_char"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_t6w6k"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_t6w6k"
+resource_scene_unique_id = "Resource_t6w6k"
+script = ExtResource("18_p15gx")
+name = "draw_char_outline"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_sg2gu"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_sg2gu"
+resource_scene_unique_id = "Resource_sg2gu"
+script = ExtResource("18_p15gx")
+name = "draw_mesh"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_fslt4"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_fslt4"
+resource_scene_unique_id = "Resource_fslt4"
+script = ExtResource("18_p15gx")
+name = "draw_multimesh"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_6el8c"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_6el8c"
+resource_scene_unique_id = "Resource_6el8c"
+script = ExtResource("18_p15gx")
+name = "draw_set_transform"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_1md3p"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_1md3p"
+resource_scene_unique_id = "Resource_1md3p"
+script = ExtResource("18_p15gx")
+name = "draw_set_transform_matrix"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_3yptc"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_3yptc"
+resource_scene_unique_id = "Resource_3yptc"
+script = ExtResource("18_p15gx")
+name = "draw_animation_slice"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_ps6xo"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_ps6xo"
+resource_scene_unique_id = "Resource_ps6xo"
+script = ExtResource("18_p15gx")
+name = "draw_end_animation"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_87ofv"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_87ofv"
+resource_scene_unique_id = "Resource_87ofv"
+script = ExtResource("18_p15gx")
+name = "get_transform"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_m86r6"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_m86r6"
+resource_scene_unique_id = "Resource_m86r6"
+script = ExtResource("18_p15gx")
+name = "get_global_transform"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_i2ogd"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_i2ogd"
+resource_scene_unique_id = "Resource_i2ogd"
+script = ExtResource("18_p15gx")
+name = "get_global_transform_with_canvas"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_hq4hm"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_hq4hm"
+resource_scene_unique_id = "Resource_hq4hm"
+script = ExtResource("18_p15gx")
+name = "get_viewport_transform"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_qt1uo"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_qt1uo"
+resource_scene_unique_id = "Resource_qt1uo"
+script = ExtResource("18_p15gx")
+name = "get_viewport_rect"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_u7ws3"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_u7ws3"
+resource_scene_unique_id = "Resource_u7ws3"
+script = ExtResource("18_p15gx")
+name = "get_canvas_transform"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_4mai2"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_4mai2"
+resource_scene_unique_id = "Resource_4mai2"
+script = ExtResource("18_p15gx")
+name = "get_screen_transform"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_jrca4"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_jrca4"
+resource_scene_unique_id = "Resource_jrca4"
+script = ExtResource("18_p15gx")
+name = "get_local_mouse_position"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_juj21"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_juj21"
+resource_scene_unique_id = "Resource_juj21"
+script = ExtResource("18_p15gx")
+name = "get_global_mouse_position"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_w6atr"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_w6atr"
+resource_scene_unique_id = "Resource_w6atr"
+script = ExtResource("18_p15gx")
+name = "get_canvas"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_b0j6n"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_b0j6n"
+resource_scene_unique_id = "Resource_b0j6n"
+script = ExtResource("18_p15gx")
+name = "get_canvas_layer_node"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_whsd8"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_whsd8"
+resource_scene_unique_id = "Resource_whsd8"
+script = ExtResource("18_p15gx")
+name = "get_world_2d"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_e7epu"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_e7epu"
+resource_scene_unique_id = "Resource_e7epu"
+script = ExtResource("18_p15gx")
+name = "set_material"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_ef4la"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_ef4la"
+resource_scene_unique_id = "Resource_ef4la"
+script = ExtResource("18_p15gx")
+name = "get_material"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_7laha"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_7laha"
+resource_scene_unique_id = "Resource_7laha"
+script = ExtResource("18_p15gx")
+name = "set_instance_shader_parameter"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_n15ic"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_n15ic"
+resource_scene_unique_id = "Resource_n15ic"
+script = ExtResource("18_p15gx")
+name = "get_instance_shader_parameter"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_d3wwh"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_d3wwh"
+resource_scene_unique_id = "Resource_d3wwh"
+script = ExtResource("18_p15gx")
+name = "set_use_parent_material"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_q7wkd"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_q7wkd"
+resource_scene_unique_id = "Resource_q7wkd"
+script = ExtResource("18_p15gx")
+name = "get_use_parent_material"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_n4042"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_n4042"
+resource_scene_unique_id = "Resource_n4042"
+script = ExtResource("18_p15gx")
+name = "set_notify_local_transform"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_jit8j"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_jit8j"
+resource_scene_unique_id = "Resource_jit8j"
+script = ExtResource("18_p15gx")
+name = "is_local_transform_notification_enabled"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_1ov6x"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_1ov6x"
+resource_scene_unique_id = "Resource_1ov6x"
+script = ExtResource("18_p15gx")
+name = "set_notify_transform"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_rggcp"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_rggcp"
+resource_scene_unique_id = "Resource_rggcp"
+script = ExtResource("18_p15gx")
+name = "is_transform_notification_enabled"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_17v1a"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_17v1a"
+resource_scene_unique_id = "Resource_17v1a"
+script = ExtResource("18_p15gx")
+name = "force_update_transform"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_ot3o5"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_ot3o5"
+resource_scene_unique_id = "Resource_ot3o5"
+script = ExtResource("18_p15gx")
+name = "make_canvas_position_local"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_kqq6j"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_kqq6j"
+resource_scene_unique_id = "Resource_kqq6j"
+script = ExtResource("18_p15gx")
+name = "make_input_local"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_4oyjq"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_4oyjq"
+resource_scene_unique_id = "Resource_4oyjq"
+script = ExtResource("18_p15gx")
+name = "set_visibility_layer"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_ehxn2"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_ehxn2"
+resource_scene_unique_id = "Resource_ehxn2"
+script = ExtResource("18_p15gx")
+name = "get_visibility_layer"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_x64th"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_x64th"
+resource_scene_unique_id = "Resource_x64th"
+script = ExtResource("18_p15gx")
+name = "set_visibility_layer_bit"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_ynojt"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_ynojt"
+resource_scene_unique_id = "Resource_ynojt"
+script = ExtResource("18_p15gx")
+name = "get_visibility_layer_bit"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_5rrhy"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_5rrhy"
+resource_scene_unique_id = "Resource_5rrhy"
+script = ExtResource("18_p15gx")
+name = "set_texture_filter"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_0lwdt"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_0lwdt"
+resource_scene_unique_id = "Resource_0lwdt"
+script = ExtResource("18_p15gx")
+name = "get_texture_filter"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_bpd4x"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_bpd4x"
+resource_scene_unique_id = "Resource_bpd4x"
+script = ExtResource("18_p15gx")
+name = "set_texture_repeat"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_1280u"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_1280u"
+resource_scene_unique_id = "Resource_1280u"
+script = ExtResource("18_p15gx")
+name = "get_texture_repeat"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_8ux0f"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_8ux0f"
+resource_scene_unique_id = "Resource_8ux0f"
+script = ExtResource("18_p15gx")
+name = "set_clip_children_mode"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_s7mmv"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_s7mmv"
+resource_scene_unique_id = "Resource_s7mmv"
+script = ExtResource("18_p15gx")
+name = "get_clip_children_mode"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_b2lk0"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_b2lk0"
+resource_scene_unique_id = "Resource_b2lk0"
+script = ExtResource("18_p15gx")
+name = "go_to"
+enabled = false
+description = ""
+
+[sub_resource type="Resource" id="Resource_7mefh"]
+Resource = null
+resource_path = "res://scenes/game_scene/levels/level_3.tscn::Resource_7mefh"
+script = ExtResource("19_vytim")
+definitions = Array[ExtResource("18_p15gx")]([SubResource("Resource_52fqs"), SubResource("Resource_oxc23"), SubResource("Resource_0o0d5"), SubResource("Resource_vpiom"), SubResource("Resource_hgw2v"), SubResource("Resource_5lmw2"), SubResource("Resource_t6sls"), SubResource("Resource_wek8d"), SubResource("Resource_je085"), SubResource("Resource_6wbux"), SubResource("Resource_tmtua"), SubResource("Resource_nfkwa"), SubResource("Resource_ubkcs"), SubResource("Resource_3nx1u"), SubResource("Resource_572fq"), SubResource("Resource_1r6ei"), SubResource("Resource_yaoot"), SubResource("Resource_p15gx"), SubResource("Resource_vytim"), SubResource("Resource_oxkyo"), SubResource("Resource_yea7t"), SubResource("Resource_apcst"), SubResource("Resource_75b5q"), SubResource("Resource_g3btv"), SubResource("Resource_de7vr"), SubResource("Resource_rk5lx"), SubResource("Resource_qml4k"), SubResource("Resource_sa4bd"), SubResource("Resource_5mkpk"), SubResource("Resource_sbij3"), SubResource("Resource_3gwi3"), SubResource("Resource_q1o3g"), SubResource("Resource_rouv3"), SubResource("Resource_y4iy0"), SubResource("Resource_pbyug"), SubResource("Resource_nwgcx"), SubResource("Resource_5qkkd"), SubResource("Resource_he170"), SubResource("Resource_rholy"), SubResource("Resource_xmgw7"), SubResource("Resource_b8x37"), SubResource("Resource_w4hav"), SubResource("Resource_4x11h"), SubResource("Resource_fo7wn"), SubResource("Resource_d7svp"), SubResource("Resource_8xykc"), SubResource("Resource_hessl"), SubResource("Resource_ir50b"), SubResource("Resource_wo0lf"), SubResource("Resource_yj1re"), SubResource("Resource_qar7u"), SubResource("Resource_2hid7"), SubResource("Resource_qmvo6"), SubResource("Resource_lukgg"), SubResource("Resource_8iq0r"), SubResource("Resource_ee7vy"), SubResource("Resource_faqni"), SubResource("Resource_2a43p"), SubResource("Resource_3ikgc"), SubResource("Resource_5jcjd"), SubResource("Resource_58sw8"), SubResource("Resource_87su7"), SubResource("Resource_c6b47"), SubResource("Resource_lcmwv"), SubResource("Resource_qdllh"), SubResource("Resource_4k5ha"), SubResource("Resource_7ive0"), SubResource("Resource_vgqnp"), SubResource("Resource_u61fl"), SubResource("Resource_ivmic"), SubResource("Resource_i01nl"), SubResource("Resource_n1512"), SubResource("Resource_tse4b"), SubResource("Resource_bmyut"), SubResource("Resource_db1he"), SubResource("Resource_r3v76"), SubResource("Resource_yhf3w"), SubResource("Resource_b3a31"), SubResource("Resource_cwgud"), SubResource("Resource_hvomc"), SubResource("Resource_krd6w"), SubResource("Resource_b7nn0"), SubResource("Resource_nl0d3"), SubResource("Resource_iqgkv"), SubResource("Resource_cc2g5"), SubResource("Resource_k4cxd"), SubResource("Resource_8ycn5"), SubResource("Resource_vs8c2"), SubResource("Resource_ly4py"), SubResource("Resource_sa4xo"), SubResource("Resource_uy5yv"), SubResource("Resource_j1c12"), SubResource("Resource_bm76i"), SubResource("Resource_ufg86"), SubResource("Resource_8glfc"), SubResource("Resource_h4usu"), SubResource("Resource_auy47"), SubResource("Resource_4r6p3"), SubResource("Resource_m03i4"), SubResource("Resource_norje"), SubResource("Resource_15soc"), SubResource("Resource_uhc4y"), SubResource("Resource_dffty"), SubResource("Resource_v0u1s"), SubResource("Resource_iu82w"), SubResource("Resource_hirmo"), SubResource("Resource_6u5l3"), SubResource("Resource_ey7ov"), SubResource("Resource_5m34g"), SubResource("Resource_m1uln"), SubResource("Resource_t5jgk"), SubResource("Resource_0fk37"), SubResource("Resource_6v7p7"), SubResource("Resource_h1pqw"), SubResource("Resource_kl3qx"), SubResource("Resource_85bqc"), SubResource("Resource_txc1q"), SubResource("Resource_7jy8s"), SubResource("Resource_3pk3q"), SubResource("Resource_yeoga"), SubResource("Resource_j5j8g"), SubResource("Resource_i5rh4"), SubResource("Resource_0p2oo"), SubResource("Resource_j3rea"), SubResource("Resource_57nyr"), SubResource("Resource_1h3ly"), SubResource("Resource_v7kbb"), SubResource("Resource_run2q"), SubResource("Resource_csb4k"), SubResource("Resource_542fc"), SubResource("Resource_q4136"), SubResource("Resource_6gwxd"), SubResource("Resource_ul541"), SubResource("Resource_1hr3p"), SubResource("Resource_x1tub"), SubResource("Resource_qlx4m"), SubResource("Resource_5gbev"), SubResource("Resource_iv0fu"), SubResource("Resource_mkvmn"), SubResource("Resource_du2ho"), SubResource("Resource_tee7v"), SubResource("Resource_wudkq"), SubResource("Resource_mucky"), SubResource("Resource_5r1sm"), SubResource("Resource_3irs0"), SubResource("Resource_l1pjv"), SubResource("Resource_ard0s"), SubResource("Resource_50ffy"), SubResource("Resource_j4yxa"), SubResource("Resource_yj7pm"), SubResource("Resource_741u6"), SubResource("Resource_0kwee"), SubResource("Resource_wv2im"), SubResource("Resource_xrt3g"), SubResource("Resource_0t1x2"), SubResource("Resource_bn0pk"), SubResource("Resource_xdx5m"), SubResource("Resource_5q5n6"), SubResource("Resource_rabnj"), SubResource("Resource_48xhk"), SubResource("Resource_70f4p"), SubResource("Resource_4hvsm"), SubResource("Resource_840pa"), SubResource("Resource_nwjug"), SubResource("Resource_676ca"), SubResource("Resource_tplkb"), SubResource("Resource_42ep6"), SubResource("Resource_5dyx8"), SubResource("Resource_t6w6k"), SubResource("Resource_sg2gu"), SubResource("Resource_fslt4"), SubResource("Resource_6el8c"), SubResource("Resource_1md3p"), SubResource("Resource_3yptc"), SubResource("Resource_ps6xo"), SubResource("Resource_87ofv"), SubResource("Resource_m86r6"), SubResource("Resource_i2ogd"), SubResource("Resource_hq4hm"), SubResource("Resource_qt1uo"), SubResource("Resource_u7ws3"), SubResource("Resource_4mai2"), SubResource("Resource_jrca4"), SubResource("Resource_juj21"), SubResource("Resource_w6atr"), SubResource("Resource_b0j6n"), SubResource("Resource_whsd8"), SubResource("Resource_e7epu"), SubResource("Resource_ef4la"), SubResource("Resource_7laha"), SubResource("Resource_n15ic"), SubResource("Resource_d3wwh"), SubResource("Resource_q7wkd"), SubResource("Resource_n4042"), SubResource("Resource_jit8j"), SubResource("Resource_1ov6x"), SubResource("Resource_rggcp"), SubResource("Resource_17v1a"), SubResource("Resource_ot3o5"), SubResource("Resource_kqq6j"), SubResource("Resource_4oyjq"), SubResource("Resource_ehxn2"), SubResource("Resource_x64th"), SubResource("Resource_ynojt"), SubResource("Resource_5rrhy"), SubResource("Resource_0lwdt"), SubResource("Resource_bpd4x"), SubResource("Resource_1280u"), SubResource("Resource_8ux0f"), SubResource("Resource_s7mmv"), SubResource("Resource_b2lk0")])
+move_and_slide = SubResource("Resource_52fqs")
+apply_floor_snap = SubResource("Resource_oxc23")
+set_velocity = SubResource("Resource_0o0d5")
+get_velocity = SubResource("Resource_vpiom")
+set_safe_margin = SubResource("Resource_hgw2v")
+get_safe_margin = SubResource("Resource_5lmw2")
+is_floor_stop_on_slope_enabled = SubResource("Resource_t6sls")
+set_floor_stop_on_slope_enabled = SubResource("Resource_wek8d")
+set_floor_constant_speed_enabled = SubResource("Resource_je085")
+is_floor_constant_speed_enabled = SubResource("Resource_6wbux")
+set_floor_block_on_wall_enabled = SubResource("Resource_tmtua")
+is_floor_block_on_wall_enabled = SubResource("Resource_nfkwa")
+set_slide_on_ceiling_enabled = SubResource("Resource_ubkcs")
+is_slide_on_ceiling_enabled = SubResource("Resource_3nx1u")
+set_platform_floor_layers = SubResource("Resource_572fq")
+get_platform_floor_layers = SubResource("Resource_1r6ei")
+set_platform_wall_layers = SubResource("Resource_yaoot")
+get_platform_wall_layers = SubResource("Resource_p15gx")
+get_max_slides = SubResource("Resource_vytim")
+set_max_slides = SubResource("Resource_oxkyo")
+get_floor_max_angle = SubResource("Resource_yea7t")
+set_floor_max_angle = SubResource("Resource_apcst")
+get_floor_snap_length = SubResource("Resource_75b5q")
+set_floor_snap_length = SubResource("Resource_g3btv")
+get_wall_min_slide_angle = SubResource("Resource_de7vr")
+set_wall_min_slide_angle = SubResource("Resource_rk5lx")
+get_up_direction = SubResource("Resource_qml4k")
+set_up_direction = SubResource("Resource_sa4bd")
+set_motion_mode = SubResource("Resource_5mkpk")
+get_motion_mode = SubResource("Resource_sbij3")
+set_platform_on_leave = SubResource("Resource_3gwi3")
+get_platform_on_leave = SubResource("Resource_q1o3g")
+is_on_floor = SubResource("Resource_rouv3")
+is_on_floor_only = SubResource("Resource_y4iy0")
+is_on_ceiling = SubResource("Resource_pbyug")
+is_on_ceiling_only = SubResource("Resource_nwgcx")
+is_on_wall = SubResource("Resource_5qkkd")
+is_on_wall_only = SubResource("Resource_he170")
+get_floor_normal = SubResource("Resource_rholy")
+get_wall_normal = SubResource("Resource_xmgw7")
+get_last_motion = SubResource("Resource_b8x37")
+get_position_delta = SubResource("Resource_w4hav")
+get_real_velocity = SubResource("Resource_4x11h")
+get_floor_angle = SubResource("Resource_fo7wn")
+get_platform_velocity = SubResource("Resource_d7svp")
+get_slide_collision_count = SubResource("Resource_8xykc")
+get_slide_collision = SubResource("Resource_hessl")
+get_last_slide_collision = SubResource("Resource_ir50b")
+move_and_collide = SubResource("Resource_wo0lf")
+test_move = SubResource("Resource_yj1re")
+get_gravity = SubResource("Resource_qar7u")
+get_collision_exceptions = SubResource("Resource_2hid7")
+add_collision_exception_with = SubResource("Resource_qmvo6")
+remove_collision_exception_with = SubResource("Resource_lukgg")
+get_rid = SubResource("Resource_8iq0r")
+set_collision_layer = SubResource("Resource_ee7vy")
+get_collision_layer = SubResource("Resource_faqni")
+set_collision_mask = SubResource("Resource_2a43p")
+get_collision_mask = SubResource("Resource_3ikgc")
+set_collision_layer_value = SubResource("Resource_5jcjd")
+get_collision_layer_value = SubResource("Resource_58sw8")
+set_collision_mask_value = SubResource("Resource_87su7")
+get_collision_mask_value = SubResource("Resource_c6b47")
+set_collision_priority = SubResource("Resource_lcmwv")
+get_collision_priority = SubResource("Resource_qdllh")
+set_disable_mode = SubResource("Resource_4k5ha")
+get_disable_mode = SubResource("Resource_7ive0")
+set_pickable = SubResource("Resource_vgqnp")
+is_pickable = SubResource("Resource_u61fl")
+create_shape_owner = SubResource("Resource_ivmic")
+remove_shape_owner = SubResource("Resource_i01nl")
+get_shape_owners = SubResource("Resource_n1512")
+shape_owner_set_transform = SubResource("Resource_tse4b")
+shape_owner_get_transform = SubResource("Resource_bmyut")
+shape_owner_get_owner = SubResource("Resource_db1he")
+shape_owner_set_disabled = SubResource("Resource_r3v76")
+is_shape_owner_disabled = SubResource("Resource_yhf3w")
+shape_owner_set_one_way_collision = SubResource("Resource_b3a31")
+is_shape_owner_one_way_collision_enabled = SubResource("Resource_cwgud")
+shape_owner_set_one_way_collision_margin = SubResource("Resource_hvomc")
+get_shape_owner_one_way_collision_margin = SubResource("Resource_krd6w")
+shape_owner_add_shape = SubResource("Resource_b7nn0")
+shape_owner_get_shape_count = SubResource("Resource_nl0d3")
+shape_owner_get_shape = SubResource("Resource_iqgkv")
+shape_owner_get_shape_index = SubResource("Resource_cc2g5")
+shape_owner_remove_shape = SubResource("Resource_k4cxd")
+shape_owner_clear_shapes = SubResource("Resource_8ycn5")
+shape_find_owner = SubResource("Resource_vs8c2")
+set_position = SubResource("Resource_ly4py")
+set_rotation = SubResource("Resource_sa4xo")
+set_rotation_degrees = SubResource("Resource_uy5yv")
+set_skew = SubResource("Resource_j1c12")
+set_scale = SubResource("Resource_bm76i")
+get_position = SubResource("Resource_ufg86")
+get_rotation = SubResource("Resource_8glfc")
+get_rotation_degrees = SubResource("Resource_h4usu")
+get_skew = SubResource("Resource_auy47")
+get_scale = SubResource("Resource_4r6p3")
+rotate = SubResource("Resource_m03i4")
+move_local_x = SubResource("Resource_norje")
+move_local_y = SubResource("Resource_15soc")
+translate = SubResource("Resource_uhc4y")
+global_translate = SubResource("Resource_dffty")
+apply_scale = SubResource("Resource_v0u1s")
+set_global_position = SubResource("Resource_iu82w")
+get_global_position = SubResource("Resource_hirmo")
+set_global_rotation = SubResource("Resource_6u5l3")
+set_global_rotation_degrees = SubResource("Resource_ey7ov")
+get_global_rotation = SubResource("Resource_5m34g")
+get_global_rotation_degrees = SubResource("Resource_m1uln")
+set_global_skew = SubResource("Resource_t5jgk")
+get_global_skew = SubResource("Resource_0fk37")
+set_global_scale = SubResource("Resource_6v7p7")
+get_global_scale = SubResource("Resource_h1pqw")
+set_transform = SubResource("Resource_kl3qx")
+set_global_transform = SubResource("Resource_85bqc")
+look_at = SubResource("Resource_txc1q")
+get_angle_to = SubResource("Resource_7jy8s")
+to_local = SubResource("Resource_3pk3q")
+to_global = SubResource("Resource_yeoga")
+get_relative_transform_to_parent = SubResource("Resource_j5j8g")
+get_canvas_item = SubResource("Resource_i5rh4")
+set_visible = SubResource("Resource_0p2oo")
+is_visible = SubResource("Resource_j3rea")
+is_visible_in_tree = SubResource("Resource_57nyr")
+show = SubResource("Resource_1h3ly")
+hide = SubResource("Resource_v7kbb")
+queue_redraw = SubResource("Resource_run2q")
+move_to_front = SubResource("Resource_csb4k")
+set_as_top_level = SubResource("Resource_542fc")
+is_set_as_top_level = SubResource("Resource_q4136")
+set_light_mask = SubResource("Resource_6gwxd")
+get_light_mask = SubResource("Resource_ul541")
+set_modulate = SubResource("Resource_1hr3p")
+get_modulate = SubResource("Resource_x1tub")
+set_self_modulate = SubResource("Resource_qlx4m")
+get_self_modulate = SubResource("Resource_5gbev")
+set_z_index = SubResource("Resource_iv0fu")
+get_z_index = SubResource("Resource_mkvmn")
+set_z_as_relative = SubResource("Resource_du2ho")
+is_z_relative = SubResource("Resource_tee7v")
+set_y_sort_enabled = SubResource("Resource_wudkq")
+is_y_sort_enabled = SubResource("Resource_mucky")
+set_draw_behind_parent = SubResource("Resource_5r1sm")
+is_draw_behind_parent_enabled = SubResource("Resource_3irs0")
+draw_line = SubResource("Resource_l1pjv")
+draw_dashed_line = SubResource("Resource_ard0s")
+draw_polyline = SubResource("Resource_50ffy")
+draw_polyline_colors = SubResource("Resource_j4yxa")
+draw_arc = SubResource("Resource_yj7pm")
+draw_multiline = SubResource("Resource_741u6")
+draw_multiline_colors = SubResource("Resource_0kwee")
+draw_rect = SubResource("Resource_wv2im")
+draw_circle = SubResource("Resource_xrt3g")
+draw_texture = SubResource("Resource_0t1x2")
+draw_texture_rect = SubResource("Resource_bn0pk")
+draw_texture_rect_region = SubResource("Resource_xdx5m")
+draw_msdf_texture_rect_region = SubResource("Resource_5q5n6")
+draw_lcd_texture_rect_region = SubResource("Resource_rabnj")
+draw_style_box = SubResource("Resource_48xhk")
+draw_primitive = SubResource("Resource_70f4p")
+draw_polygon = SubResource("Resource_4hvsm")
+draw_colored_polygon = SubResource("Resource_840pa")
+draw_string = SubResource("Resource_nwjug")
+draw_multiline_string = SubResource("Resource_676ca")
+draw_string_outline = SubResource("Resource_tplkb")
+draw_multiline_string_outline = SubResource("Resource_42ep6")
+draw_char = SubResource("Resource_5dyx8")
+draw_char_outline = SubResource("Resource_t6w6k")
+draw_mesh = SubResource("Resource_sg2gu")
+draw_multimesh = SubResource("Resource_fslt4")
+draw_set_transform = SubResource("Resource_6el8c")
+draw_set_transform_matrix = SubResource("Resource_1md3p")
+draw_animation_slice = SubResource("Resource_3yptc")
+draw_end_animation = SubResource("Resource_ps6xo")
+get_transform = SubResource("Resource_87ofv")
+get_global_transform = SubResource("Resource_m86r6")
+get_global_transform_with_canvas = SubResource("Resource_i2ogd")
+get_viewport_transform = SubResource("Resource_hq4hm")
+get_viewport_rect = SubResource("Resource_qt1uo")
+get_canvas_transform = SubResource("Resource_u7ws3")
+get_screen_transform = SubResource("Resource_4mai2")
+get_local_mouse_position = SubResource("Resource_jrca4")
+get_global_mouse_position = SubResource("Resource_juj21")
+get_canvas = SubResource("Resource_w6atr")
+get_canvas_layer_node = SubResource("Resource_b0j6n")
+get_world_2d = SubResource("Resource_whsd8")
+set_material = SubResource("Resource_e7epu")
+get_material = SubResource("Resource_ef4la")
+set_instance_shader_parameter = SubResource("Resource_7laha")
+get_instance_shader_parameter = SubResource("Resource_n15ic")
+set_use_parent_material = SubResource("Resource_d3wwh")
+get_use_parent_material = SubResource("Resource_q7wkd")
+set_notify_local_transform = SubResource("Resource_n4042")
+is_local_transform_notification_enabled = SubResource("Resource_jit8j")
+set_notify_transform = SubResource("Resource_1ov6x")
+is_transform_notification_enabled = SubResource("Resource_rggcp")
+force_update_transform = SubResource("Resource_17v1a")
+make_canvas_position_local = SubResource("Resource_ot3o5")
+make_input_local = SubResource("Resource_kqq6j")
+set_visibility_layer = SubResource("Resource_4oyjq")
+get_visibility_layer = SubResource("Resource_ehxn2")
+set_visibility_layer_bit = SubResource("Resource_x64th")
+get_visibility_layer_bit = SubResource("Resource_ynojt")
+set_texture_filter = SubResource("Resource_5rrhy")
+get_texture_filter = SubResource("Resource_0lwdt")
+set_texture_repeat = SubResource("Resource_bpd4x")
+get_texture_repeat = SubResource("Resource_1280u")
+set_clip_children_mode = SubResource("Resource_8ux0f")
+get_clip_children_mode = SubResource("Resource_s7mmv")
+go_to = SubResource("Resource_b2lk0")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8avtb"]
+radius = 8.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ua84b"]
+radius = 8.0
+
+[node name="Level3" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_ivmic")
+
+[node name="TileMapLayerGrass" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAD8//n/AgACAAsAAAD8//r/AgACAAsAAAD8//v/AgACAAsAAAD8//z/AgACAAsAAAD8//3/AgACAAsAAAD8//7/AgACAAsAAAD8////AgACAAsAAAD8/wAAAgACAAsAAAD8/wEAAgACAAsAAAD9//n/AgACAAsAAAD9//r/AgACAAsAAAD9//v/AgACAAsAAAD9//z/AgACAAsAAAD9//3/AgACAAsAAAD9//7/AgACAAsAAAD9////AgACAAsAAAD9/wAAAgACAAsAAAD9/wEAAgACAAsAAAD+//n/AgACAAsAAAD+//r/AgACAAsAAAD+//v/AgACAAsAAAD+//z/AgACAAsAAAD+//3/AgACAAsAAAD+//7/AgACAAsAAAD+////AgACAAsAAAD+/wAAAgACAAsAAAD+/wEAAgACAAsAAAD///n/AgACAAsAAAD///r/AgACAAsAAAD///v/AgACAAsAAAD///z/AgACAAsAAAD///3/AgACAAsAAAD///7/AgACAAsAAAD/////AgACAAsAAAD//wAAAgACAAsAAAD//wEAAgACAAsAAAAAAPn/AgACAAsAAAAAAPr/AgACAAsAAAAAAPv/AgACAAsAAAAAAPz/AgACAAsAAAAAAP3/AgACAAsAAAAAAP7/AgACAAsAAAAAAP//AgACAAsAAAAAAAAAAgACAAsAAAAAAAEAAgACAAsAAAABAPn/AgACAAsAAAABAPr/AgACAAsAAAABAPv/AgACAAsAAAABAPz/AgACAAsAAAABAP3/AgACAAsAAAABAP7/AgACAAsAAAABAP//AgACAAsAAAABAAAAAgACAAsAAAABAAEAAgACAAsAAAACAPn/AgACAAsAAAACAPr/AgACAAsAAAACAPv/AgACAAsAAAACAPz/AgACAAsAAAACAP3/AgACAAsAAAACAP7/AgACAAsAAAACAP//AgACAAsAAAACAAAAAgACAAsAAAACAAEAAgACAAsAAAADAPn/AgACAAsAAAADAPr/AgACAAsAAAADAPv/AgACAAsAAAADAPz/AgACAAsAAAADAP3/AgACAAsAAAADAP7/AgACAAsAAAADAP//AgACAAsAAAADAAAAAgACAAsAAAADAAEAAgACAAsAAAD8/wIAAgACAAsAAAD9/wIAAgACAAsAAAD+/wIAAgACAAsAAAD//wIAAgACAAsAAAAAAAIAAgACAAsAAAABAAIAAgACAAsAAAACAAIAAgACAAsAAAADAAIAAgACAAsAAAAEAPn/AgACAAsAAAAEAPr/AgACAAsAAAAEAPv/AgACAAsAAAAEAPz/AgACAAsAAAAEAP3/AgACAAsAAAAEAP7/AgACAAsAAAAEAP//AgACAAsAAAAEAAAAAgACAAsAAAAEAAEAAgACAAsAAAAEAAIAAgACAAsAAAAFAAIAAgACAAsAAAAGAAIAAgACAAsAAAAHAAIAAgACAAsAAAAIAAIAAgACAAsAAAAIAAEAAgACAAsAAAAIAAAAAgACAAsAAAAIAP//AgACAAsAAAAIAP7/AgACAAsAAAAIAP3/AgACAAsAAAAIAPz/AgACAAsAAAAIAPv/AgACAAsAAAAIAPr/AgACAAsAAAAIAPn/AgACAAsAAAAHAPn/AgACAAsAAAAGAPn/AgACAAsAAAAFAPn/AgACAAsAAAAFAPr/AgACAAsAAAAFAPv/AgACAAsAAAAFAPz/AgACAAsAAAAFAP3/AgACAAsAAAAFAP7/AgACAAsAAAAFAP//AgACAAsAAAAFAAAAAgACAAsAAAAFAAEAAgACAAsAAAAGAAEAAgACAAsAAAAHAAEAAgACAAsAAAAHAAAAAgACAAsAAAAHAP//AgACAAsAAAAGAP//AgACAAsAAAAGAAAAAgACAAsAAAAGAP7/AgACAAsAAAAHAP3/AgACAAsAAAAHAPz/AgACAAsAAAAHAPv/AgACAAsAAAAGAPv/AgACAAsAAAAGAPr/AgACAAsAAAAHAPr/AgACAAsAAAAGAP3/AgACAAsAAAAGAPz/AgACAAsAAAAHAP7/AgACAAsAAAD7/wIAAgACAAsAAAD6/wIAAgACAAsAAAD5/wIAAgACAAsAAAD5/wEAAgACAAsAAAD5/wAAAgACAAsAAAD5////AgACAAsAAAD5//7/AgACAAsAAAD5//3/AgACAAsAAAD5//z/AgACAAsAAAD5//v/AgACAAsAAAD5//r/AgACAAsAAAD5//n/AgACAAsAAAD6//n/AgACAAsAAAD7//n/AgACAAsAAAD6//r/AgACAAsAAAD6//v/AgACAAsAAAD6//z/AgACAAsAAAD6//3/AgACAAsAAAD6//7/AgACAAsAAAD6////AgACAAsAAAD6/wEAAgACAAsAAAD6/wAAAgACAAsAAAD7/wEAAgACAAsAAAD7/wAAAgACAAsAAAD7////AgACAAsAAAD7//7/AgACAAsAAAD7//3/AgACAAsAAAD7//z/AgACAAsAAAD7//v/AgACAAsAAAD7//r/AgACAAsAAAD4/wIAAgACAAsAAAD3/wIAAgACAAsAAAD2/wIAAgACAAsAAAD2/wEAAgACAAsAAAD2/wAAAgACAAsAAAD2////AgACAAsAAAD2//7/AgACAAsAAAAJAAIAAgACAAsAAAAJAAEAAgACAAsAAAAJAAAAAgACAAsAAAAJAP//AgACAAsAAAAJAP7/AgACAAsAAAAJAP3/AgACAAsAAAAJAPz/AgACAAsAAAAJAPv/AgACAAsAAAAJAPr/AgACAAsAAAAJAPn/AgACAAsAAAAJAPj/AgACAAsAAAAIAPj/AgACAAsAAAAHAPj/AgACAAsAAAAGAPj/AgACAAsAAAAFAPj/AgACAAsAAAAEAPj/AgACAAsAAAADAPj/AgACAAsAAAACAPj/AgACAAsAAAABAPj/AgACAAsAAAAAAPj/AgACAAsAAAD///j/AgACAAsAAAD+//j/AgACAAsAAAD9//j/AgACAAsAAAD8//j/AgACAAsAAAD7//j/AgACAAsAAAD6//j/AgACAAsAAAD5//j/AgACAAsAAAD4//j/AgACAAsAAAD3//j/AgACAAsAAAD2//j/AgACAAsAAAD2//n/AgACAAsAAAD2//r/AgACAAsAAAD2//v/AgACAAsAAAD2//z/AgACAAsAAAD2//3/AgACAAsAAAD3//n/AgACAAsAAAD3//r/AgACAAsAAAD3//v/AgACAAsAAAD3//z/AgACAAsAAAD3//3/AgACAAsAAAD3//7/AgACAAsAAAD3////AgACAAsAAAD3/wAAAgACAAsAAAD3/wEAAgACAAsAAAD4/wEAAgACAAsAAAD4//z/AgACAAsAAAD4//v/AgACAAsAAAD4//r/AgACAAsAAAD4//n/AgACAAsAAAD4//3/AgACAAsAAAD4//7/AgACAAsAAAD4////AgACAAsAAAD4/wAAAgACAAsAAAD1/wIAAgARAAIAAAD1/wEAAgARAAIAAAD1/wAAAgARAAIAAAD1////AgARAAIAAAD1//7/AgARAAIAAADx//j/AgACAAsAAADx//n/AgACAAsAAADx//r/AgACAAsAAADx//v/AgACAAsAAADx//z/AgACAAsAAADx//3/AgACAAsAAADx//7/AgACAAsAAADx////AgACAAsAAADx/wAAAgACAAsAAADx/wEAAgACAAsAAADx/wIAAgACAAsAAADx/wMAAgACAAsAAADx/wQAAgACAAsAAADx/wUAAgACAAsAAADu//j/AgACAAsAAADu//n/AgACAAsAAADu//r/AgACAAsAAADt//r/AgACAAsAAADt//v/AgACAAsAAADt//z/AgACAAsAAADt//3/AgACAAsAAADt//7/AgACAAsAAADt////AgACAAsAAADt/wAAAgACAAsAAADt/wEAAgACAAsAAADt/wIAAgACAAsAAADt/wMAAgACAAsAAADt/wQAAgACAAsAAADt//n/AgACAAsAAADt//j/AgACAAsAAADp//j/AgACAAsAAADp//n/AgACAAsAAADp//r/AgACAAsAAADp//v/AgACAAsAAADp//z/AgACAAsAAADp//3/AgACAAsAAADp//7/AgACAAsAAADp////AgACAAsAAADp/wAAAgACAAsAAADp/wEAAgACAAsAAADp/wIAAgACAAsAAADp/wMAAgACAAsAAADp/wQAAgACAAsAAADp/wUAAgACAAsAAADp/wYAAgACAAsAAADp/wcAAgACAAsAAADp/wgAAgACAAsAAADp/wkAAgACAAsAAADq/wkAAgACAAsAAADr/wkAAgACAAsAAADs/wkAAgACAAsAAADt/wkAAgACAAsAAADu/wkAAgACAAsAAADv/wkAAgACAAsAAADw/wkAAgACAAsAAADx/wkAAgACAAsAAADy/wkAAgACAAsAAADz/wkAAgACAAsAAAD0/wkAAgACAAsAAAD1/wkAAgACAAsAAAD2/wkAAgACAAsAAAD3/wkAAgACAAsAAAD4/wkAAgACAAsAAAD5/wkAAgACAAsAAAD6/wkAAgACAAsAAAD7/wkAAgACAAsAAAD8/wkAAgACAAsAAAD9/wkAAgACAAsAAAD9/woAAgACAAsAAAD+/woAAgACAAsAAAD//woAAgACAAsAAAAAAAoAAgACAAsAAAABAAoAAgACAAsAAAACAAoAAgACAAsAAAADAAoAAgACAAsAAAAEAAoAAgACAAsAAAAFAAoAAgACAAsAAAAGAAoAAgACAAsAAAAHAAoAAgACAAsAAAAIAAoAAgACAAsAAAAJAAoAAgACAAsAAAAKAAoAAgACAAsAAAALAAoAAgACAAsAAAD8/woAAgACAAsAAAD7/woAAgACAAsAAAD6/woAAgACAAsAAAD5/woAAgACAAsAAAD4/woAAgACAAsAAAD3/woAAgACAAsAAAD2/woAAgACAAsAAAD1/woAAgACAAsAAAD0/woAAgACAAsAAADz/woAAgACAAsAAADy/woAAgACAAsAAADx/woAAgACAAsAAADp/woAAgACAAsAAADq/woAAgACAAsAAADr/woAAgACAAsAAADs/woAAgACAAsAAADt/woAAgACAAsAAADu/woAAgACAAsAAADv/woAAgACAAsAAADw/woAAgACAAsAAAAMAAoAAgACAAsAAAANAAoAAgACAAsAAAAOAAoAAgACAAsAAAAPAAoAAgACAAsAAAAPAAkAAgACAAsAAAAPAAgAAgACAAsAAAAPAAcAAgACAAsAAAAPAAYAAgACAAsAAAAPAAUAAgACAAsAAAAPAAQAAgACAAsAAAAPAAMAAgACAAsAAAAPAAIAAgACAAsAAAAPAAEAAgACAAsAAAAPAAAAAgACAAsAAAAPAP//AgACAAsAAAAPAP7/AgACAAsAAAAPAP3/AgACAAsAAAAPAPz/AgACAAsAAAAPAPv/AgACAAsAAAAPAPr/AgACAAsAAAAPAPn/AgACAAsAAAAPAPj/AgACAAsAAAAPAPf/AgACAAsAAAAPAPb/AgACAAsAAAAPAPX/AgACAAsAAAAPAPT/AgACAAsAAAAPAPP/AgACAAsAAAAOAPP/AgACAAsAAAANAPP/AgACAAsAAAAMAPP/AgACAAsAAAALAPP/AgACAAsAAAAKAPP/AgACAAsAAAAJAPP/AgACAAsAAAAIAPP/AgACAAsAAAAHAPP/AgACAAsAAAAGAPP/AgACAAsAAAAFAPP/AgACAAsAAAAEAPP/AgACAAsAAAADAPP/AgACAAsAAAACAPP/AgACAAsAAAABAPP/AgACAAsAAAAAAPP/AgACAAsAAAD///P/AgACAAsAAAD+//P/AgACAAsAAAD9//P/AgACAAsAAAD8//P/AgACAAsAAAD7//P/AgACAAsAAAD6//P/AgACAAsAAAD5//P/AgACAAsAAAD4//P/AgACAAsAAAD3//P/AgACAAsAAAD2//P/AgACAAsAAAD1//P/AgACAAsAAAD0//P/AgACAAsAAADz//P/AgACAAsAAADy//P/AgACAAsAAADx//P/AgACAAsAAADw//P/AgACAAsAAADv//P/AgACAAsAAADu//P/AgACAAsAAADt//P/AgACAAsAAADs//P/AgACAAsAAADr//P/AgACAAsAAADq//P/AgACAAsAAADp//P/AgACAAsAAADp//T/AgACAAsAAADp//X/AgACAAsAAADp//b/AgACAAsAAADp//f/AgACAAsAAAD3/wcAAgACAAsAAAD3/wYAAgACAAsAAAD3/wUAAgACAAsAAAD3/wQAAgACAAsAAAD3/wMAAgARAAIAAAD2/wMAAgARAAIAAAD1/wMAAgARAAIAAAD0/wMAAgACAAsAAAD0/wIAAgACAAsAAAD0/wEAAgACAAsAAAD0/wAAAgACAAsAAAD0////AgACAAsAAAD0//7/AgACAAsAAAD0//3/AgACAAsAAAD0//z/AgACAAsAAAD0//v/AgACAAsAAAD0//r/AgACAAsAAAD0//n/AgACAAsAAAD0//j/AgACAAsAAAD0//f/AgACAAsAAAD0//b/AgACAAsAAAD0//X/AgACAAsAAAD0//T/AgACAAsAAADz//T/AgACAAsAAADy//T/AgACAAsAAADx//T/AgACAAsAAADw//T/AgACAAsAAADv//T/AgACAAsAAADu//T/AgACAAsAAADt//T/AgACAAsAAADs//T/AgACAAsAAADr//T/AgACAAsAAADq//T/AgACAAsAAADq//X/AgACAAsAAADq//b/AgACAAsAAADq//f/AgACAAsAAADq//j/AgACAAsAAADq//n/AgACAAsAAADq//r/AgACAAsAAADq//v/AgACAAsAAADq//z/AgACAAsAAADq//3/AgACAAsAAADq//7/AgACAAsAAADq////AgACAAsAAADq/wAAAgACAAsAAADq/wEAAgACAAsAAADq/wIAAgACAAsAAADq/wMAAgACAAsAAADq/wQAAgACAAsAAADq/wUAAgACAAsAAADq/wYAAgACAAsAAADq/wcAAgACAAsAAADq/wgAAgACAAsAAADr/wgAAgACAAsAAADr/wcAAgACAAsAAADr/wYAAgACAAsAAADr/wUAAgACAAsAAADr/wQAAgACAAsAAADr/wMAAgACAAsAAADr/wIAAgACAAsAAADr/wEAAgACAAsAAADr/wAAAgACAAsAAADr////AgACAAsAAADr//7/AgACAAsAAADr//3/AgACAAsAAADr//z/AgACAAsAAADr//v/AgACAAsAAADr//r/AgACAAsAAADr//n/AgACAAsAAADr//j/AgACAAsAAADr//f/AgACAAsAAADr//b/AgACAAsAAADr//X/AgACAAsAAADs//X/AgACAAsAAADs//b/AgACAAsAAADs//f/AgACAAsAAADs//j/AgACAAsAAADs//n/AgACAAsAAADs//r/AgACAAsAAADs//v/AgACAAsAAADs//z/AgACAAsAAADs//3/AgACAAsAAADs//7/AgACAAsAAADs////AgACAAsAAADs/wAAAgACAAsAAADs/wEAAgACAAsAAADs/wIAAgACAAsAAADs/wMAAgACAAsAAADs/wQAAgACAAsAAADs/wUAAgACAAsAAADs/wYAAgACAAsAAADs/wcAAgACAAsAAADs/wgAAgACAAsAAADt/wgAAgACAAsAAADt/wcAAgACAAsAAADt/wYAAgACAAsAAADt/wUAAgACAAsAAADu/wUAAgACAAsAAADu/wQAAgACAAsAAADu/wMAAgACAAsAAADu/wIAAgACAAsAAADu/wEAAgACAAsAAADu/wAAAgACAAsAAADu////AgACAAsAAADu//7/AgACAAsAAADu//3/AgACAAsAAADu//z/AgACAAsAAADu//v/AgACAAsAAADv//v/AgACAAsAAADv//r/AgACAAsAAADv//n/AgACAAsAAADv//j/AgACAAsAAADv//f/AgACAAsAAADv//b/AgACAAsAAADv//X/AgACAAsAAADu//X/AgACAAsAAADt//X/AgACAAsAAADt//b/AgACAAsAAADt//f/AgACAAsAAADu//f/AgACAAsAAADu//b/AgACAAsAAADw//X/AgACAAsAAADw//b/AgACAAsAAADw//f/AgACAAsAAADw//j/AgACAAsAAADw//n/AgACAAsAAADw//r/AgACAAsAAADw//v/AgACAAsAAADw//z/AgACAAsAAADv//z/AgACAAsAAADv//3/AgACAAsAAADv//7/AgACAAsAAADv////AgACAAsAAADv/wAAAgACAAsAAADv/wEAAgACAAsAAADv/wIAAgACAAsAAADv/wMAAgACAAsAAADv/wQAAgACAAsAAADv/wUAAgACAAsAAADv/wYAAgACAAsAAADu/wYAAgACAAsAAADu/wcAAgACAAsAAADu/wgAAgACAAsAAADv/wgAAgACAAsAAADv/wcAAgACAAsAAADw/wcAAgACAAsAAADw/wYAAgACAAsAAADw/wUAAgACAAsAAADw/wQAAgACAAsAAADw/wMAAgACAAsAAADw/wIAAgACAAsAAADw/wEAAgACAAsAAADw/wAAAgACAAsAAADw////AgACAAsAAADw//7/AgACAAsAAADw//3/AgACAAsAAADx/wYAAgACAAsAAADx/wcAAgACAAsAAADx/wgAAgACAAsAAADw/wgAAgACAAsAAADy/wgAAgACAAsAAADy/wcAAgACAAsAAADy/wYAAgACAAsAAADy/wUAAgACAAsAAADy/wQAAgACAAsAAADy/wMAAgACAAsAAADy/wIAAgACAAsAAADy/wEAAgACAAsAAADy/wAAAgACAAsAAADy////AgACAAsAAADy//7/AgACAAsAAADy//3/AgACAAsAAADy//z/AgACAAsAAADy//v/AgACAAsAAADy//r/AgACAAsAAADy//n/AgACAAsAAADy//j/AgACAAsAAADy//f/AgACAAsAAADy//b/AgACAAsAAADy//X/AgACAAsAAADx//X/AgACAAsAAADx//b/AgACAAsAAADx//f/AgACAAsAAADz//X/AgACAAsAAADz//b/AgACAAsAAADz//f/AgACAAsAAADz//j/AgACAAsAAADz//n/AgACAAsAAADz//r/AgACAAsAAADz//v/AgACAAsAAADz//z/AgACAAsAAADz//3/AgACAAsAAADz//7/AgACAAsAAADz////AgACAAsAAADz/wAAAgACAAsAAADz/wEAAgACAAsAAADz/wIAAgACAAsAAADz/wMAAgACAAsAAADz/wQAAgACAAsAAADz/wUAAgACAAsAAADz/wYAAgACAAsAAADz/wcAAgACAAsAAADz/wgAAgACAAsAAAD0/wgAAgACAAsAAAD0/wcAAgACAAsAAAD0/wYAAgACAAsAAAD0/wUAAgACAAsAAAD0/wQAAgACAAsAAAD1/wQAAgACAAsAAAD1/wUAAgACAAsAAAD1/wYAAgACAAsAAAD1/wcAAgACAAsAAAD1/wgAAgACAAsAAAD2/wgAAgACAAsAAAD2/wcAAgACAAsAAAD2/wYAAgACAAsAAAD2/wUAAgACAAsAAAD2/wQAAgACAAsAAAD3/wgAAgACAAsAAAD4/wgAAgACAAsAAAD4/wcAAgACAAsAAAD4/wYAAgACAAsAAAD4/wUAAgACAAsAAAD4/wQAAgACAAsAAAD4/wMAAgARAAIAAAD5/wMAAgARAAIAAAD5/wQAAgACAAsAAAD5/wUAAgACAAsAAAD5/wYAAgACAAsAAAD5/wcAAgACAAsAAAD5/wgAAgACAAsAAAD6/wgAAgACAAsAAAD6/wcAAgACAAsAAAD6/wYAAgACAAsAAAD6/wUAAgACAAsAAAD6/wQAAgACAAsAAAD6/wMAAgARAAIAAAD7/wMAAgARAAIAAAD7/wQAAgACAAsAAAD7/wUAAgACAAsAAAD7/wYAAgACAAsAAAD7/wcAAgACAAsAAAD7/wgAAgACAAsAAAD8/wgAAgACAAsAAAD8/wcAAgACAAsAAAD8/wYAAgACAAsAAAD8/wUAAgACAAsAAAD8/wQAAgACAAsAAAD8/wMAAgARAAIAAAD9/wMAAgARAAIAAAD9/wQAAgACAAsAAAD9/wUAAgACAAsAAAD9/wYAAgACAAsAAAD9/wcAAgACAAsAAAD9/wgAAgACAAsAAAD+/wgAAgACAAsAAAD+/wcAAgACAAsAAAD+/wYAAgACAAsAAAD+/wUAAgACAAsAAAD+/wQAAgACAAsAAAD+/wMAAgARAAIAAAD//wMAAgARAAIAAAD//wQAAgACAAsAAAD//wUAAgACAAsAAAD//wYAAgACAAsAAAD//wcAAgACAAsAAAD//wgAAgACAAsAAAD//wkAAgACAAsAAAD+/wkAAgACAAsAAAAAAAkAAgACAAsAAAAAAAgAAgACAAsAAAAAAAcAAgACAAsAAAAAAAYAAgACAAsAAAAAAAUAAgACAAsAAAAAAAQAAgACAAsAAAAAAAMAAgARAAIAAAABAAMAAgARAAIAAAABAAQAAgACAAsAAAABAAUAAgACAAsAAAABAAYAAgACAAsAAAABAAcAAgACAAsAAAABAAgAAgACAAsAAAABAAkAAgACAAsAAAACAAkAAgACAAsAAAACAAgAAgACAAsAAAACAAcAAgACAAsAAAACAAYAAgACAAsAAAACAAUAAgACAAsAAAACAAQAAgACAAsAAAACAAMAAgARAAIAAAADAAMAAgARAAIAAAADAAQAAgACAAsAAAADAAUAAgACAAsAAAADAAYAAgACAAsAAAADAAcAAgACAAsAAAADAAgAAgACAAsAAAADAAkAAgACAAsAAAAEAAkAAgACAAsAAAAEAAgAAgACAAsAAAAEAAcAAgACAAsAAAAEAAYAAgACAAsAAAAEAAUAAgACAAsAAAAEAAQAAgACAAsAAAAEAAMAAgARAAIAAAAFAAMAAgARAAIAAAAFAAQAAgACAAsAAAAFAAUAAgACAAsAAAAFAAYAAgACAAsAAAAFAAcAAgACAAsAAAAFAAgAAgACAAsAAAAFAAkAAgACAAsAAAAGAAkAAgACAAsAAAAGAAgAAgACAAsAAAAGAAcAAgACAAsAAAAGAAYAAgACAAsAAAAGAAUAAgACAAsAAAAGAAQAAgACAAsAAAAGAAMAAgARAAIAAAAHAAMAAgARAAIAAAAHAAQAAgACAAsAAAAHAAUAAgACAAsAAAAHAAYAAgACAAsAAAAHAAcAAgACAAsAAAAHAAgAAgACAAsAAAAHAAkAAgACAAsAAAAIAAkAAgACAAsAAAAIAAgAAgACAAsAAAAIAAcAAgACAAsAAAAIAAYAAgACAAsAAAAIAAUAAgACAAsAAAAIAAQAAgACAAsAAAAIAAMAAgARAAIAAAAJAAMAAgARAAIAAAAJAAQAAgACAAsAAAAJAAUAAgACAAsAAAAJAAYAAgACAAsAAAAJAAcAAgACAAsAAAAJAAgAAgACAAsAAAAJAAkAAgACAAsAAAAKAAkAAgACAAsAAAAKAAgAAgACAAsAAAAKAAcAAgACAAsAAAAKAAYAAgACAAsAAAAKAAUAAgACAAsAAAAKAAQAAgACAAsAAAAKAAMAAgARAAIAAAAKAAIAAgARAAIAAAAKAAEAAgARAAIAAAAKAAAAAgARAAIAAAAKAP//AgARAAIAAAAKAP7/AgARAAIAAAAKAP3/AgARAAIAAAAKAPz/AgARAAIAAAAKAPv/AgARAAIAAAAKAPr/AgARAAIAAAAKAPn/AgARAAIAAAAKAPj/AgARAAIAAAAKAPf/AgARAAIAAAAKAPb/AgACAAsAAAAKAPX/AgACAAsAAAAKAPT/AgACAAsAAAAJAPT/AgACAAsAAAAIAPT/AgACAAsAAAAHAPT/AgACAAsAAAAGAPT/AgACAAsAAAAFAPT/AgACAAsAAAAEAPT/AgACAAsAAAADAPT/AgACAAsAAAACAPT/AgACAAsAAAABAPT/AgACAAsAAAAAAPT/AgACAAsAAAD///T/AgACAAsAAAD+//T/AgACAAsAAAD9//T/AgACAAsAAAD8//T/AgACAAsAAAD7//T/AgACAAsAAAD6//T/AgACAAsAAAD5//T/AgACAAsAAAD4//T/AgACAAsAAAD3//T/AgACAAsAAAD2//T/AgACAAsAAAD1//T/AgACAAsAAAD1//X/AgACAAsAAAD1//b/AgACAAsAAAD1//f/AgARAAIAAAD1//j/AgARAAIAAAD1//n/AgARAAIAAAD1//r/AgARAAIAAAD1//v/AgARAAIAAAD1//z/AgARAAIAAAD1//3/AgARAAIAAAD2//f/AgARAAIAAAD2//b/AgACAAsAAAD2//X/AgACAAsAAAD3//X/AgACAAsAAAD3//b/AgACAAsAAAD3//f/AgARAAIAAAD4//f/AgARAAIAAAD4//b/AgACAAsAAAD4//X/AgACAAsAAAD5//X/AgACAAsAAAD5//b/AgACAAsAAAD5//f/AgARAAIAAAD6//f/AgARAAIAAAD6//b/AgACAAsAAAD6//X/AgACAAsAAAD7//X/AgACAAsAAAD7//b/AgACAAsAAAD7//f/AgARAAIAAAD8//f/AgARAAIAAAD8//b/AgACAAsAAAD8//X/AgACAAsAAAD9//X/AgACAAsAAAD9//b/AgACAAsAAAD9//f/AgARAAIAAAD+//f/AgARAAIAAAD+//b/AgACAAsAAAD+//X/AgACAAsAAAD///X/AgACAAsAAAD///b/AgACAAsAAAD///f/AgARAAIAAAAAAPf/AgARAAIAAAAAAPb/AgACAAsAAAAAAPX/AgACAAsAAAABAPX/AgACAAsAAAABAPb/AgACAAsAAAABAPf/AgARAAIAAAACAPf/AgARAAIAAAACAPb/AgACAAsAAAACAPX/AgACAAsAAAADAPX/AgACAAsAAAADAPb/AgACAAsAAAADAPf/AgARAAIAAAAEAPf/AgARAAIAAAAEAPb/AgACAAsAAAAEAPX/AgACAAsAAAAFAPX/AgACAAsAAAAFAPb/AgACAAsAAAAFAPf/AgARAAIAAAAGAPf/AgARAAIAAAAGAPb/AgACAAsAAAAGAPX/AgACAAsAAAAHAPX/AgACAAsAAAAHAPb/AgACAAsAAAAHAPf/AgARAAIAAAAIAPf/AgARAAIAAAAIAPb/AgACAAsAAAAIAPX/AgACAAsAAAAJAPX/AgACAAsAAAAJAPb/AgACAAsAAAAJAPf/AgARAAIAAAALAPT/AgACAAsAAAALAPX/AgACAAsAAAALAPb/AgACAAsAAAALAPf/AgACAAsAAAALAPj/AgACAAsAAAALAPn/AgACAAsAAAALAPr/AgACAAsAAAALAPv/AgACAAsAAAALAPz/AgACAAsAAAALAP3/AgACAAsAAAALAP7/AgACAAsAAAALAP//AgACAAsAAAALAAAAAgACAAsAAAALAAEAAgACAAsAAAALAAIAAgACAAsAAAALAAMAAgACAAsAAAALAAQAAgACAAsAAAALAAUAAgACAAsAAAALAAYAAgACAAsAAAALAAcAAgACAAsAAAALAAgAAgACAAsAAAALAAkAAgACAAsAAAAMAAkAAgACAAsAAAAMAAgAAgACAAsAAAAMAAcAAgACAAsAAAAMAAYAAgACAAsAAAAMAAUAAgACAAsAAAAMAAQAAgACAAsAAAAMAAMAAgACAAsAAAAMAAIAAgACAAsAAAAMAAEAAgACAAsAAAAMAAAAAgACAAsAAAAMAP//AgACAAsAAAAMAP7/AgACAAsAAAAMAP3/AgACAAsAAAAMAPz/AgACAAsAAAAMAPv/AgACAAsAAAAMAPr/AgACAAsAAAAMAPn/AgACAAsAAAAMAPj/AgACAAsAAAAMAPf/AgACAAsAAAAMAPb/AgACAAsAAAAMAPX/AgACAAsAAAAMAPT/AgACAAsAAAANAPT/AgACAAsAAAANAPX/AgACAAsAAAANAPb/AgACAAsAAAANAPf/AgACAAsAAAANAPj/AgACAAsAAAANAPn/AgACAAsAAAANAPr/AgACAAsAAAANAPv/AgACAAsAAAANAPz/AgACAAsAAAANAP3/AgACAAsAAAANAP7/AgACAAsAAAANAP//AgACAAsAAAANAAAAAgACAAsAAAANAAEAAgACAAsAAAANAAIAAgACAAsAAAANAAMAAgACAAsAAAANAAQAAgACAAsAAAANAAUAAgACAAsAAAANAAYAAgACAAsAAAANAAcAAgACAAsAAAANAAgAAgACAAsAAAANAAkAAgACAAsAAAAOAAkAAgACAAsAAAAOAAgAAgACAAsAAAAOAAcAAgACAAsAAAAOAAYAAgACAAsAAAAOAAUAAgACAAsAAAAOAAQAAgACAAsAAAAOAAMAAgACAAsAAAAOAAIAAgACAAsAAAAOAAEAAgACAAsAAAAOAAAAAgACAAsAAAAOAP//AgACAAsAAAAOAP7/AgACAAsAAAAOAP3/AgACAAsAAAAOAPz/AgACAAsAAAAOAPv/AgACAAsAAAAOAPr/AgACAAsAAAAOAPn/AgACAAsAAAAOAPj/AgACAAsAAAAOAPf/AgACAAsAAAAOAPb/AgACAAsAAAAOAPX/AgACAAsAAAAOAPT/AgACAAsAAAAQAAoAAgACAAsAAAARAAoAAgACAAsAAAASAAoAAgACAAsAAAATAAoAAgACAAsAAAAUAAoAAgACAAsAAAAVAAoAAgACAAsAAAAVAAkAAgACAAsAAAAVAAgAAgACAAsAAAAVAAcAAgACAAsAAAAVAAYAAgACAAsAAAAVAAUAAgACAAsAAAAVAAQAAgACAAsAAAAWAAMAAgACAAsAAAAWAAIAAgACAAsAAAAWAAEAAgACAAsAAAAWAAAAAgACAAsAAAAWAP//AgACAAsAAAAWAP7/AgACAAsAAAAWAP3/AgACAAsAAAAWAAQAAgACAAsAAAAWAAUAAgACAAsAAAAWAAYAAgACAAsAAAAWAAcAAgACAAsAAAAWAAgAAgACAAsAAAAWAAkAAgACAAsAAAAWAAoAAgACAAsAAAAQAPP/AgACAAsAAAARAPP/AgACAAsAAAASAPP/AgACAAsAAAATAPP/AgACAAsAAAAUAPP/AgACAAsAAAAVAPP/AgACAAsAAAAWAPP/AgACAAsAAAAWAPT/AgACAAsAAAAWAPX/AgACAAsAAAAWAPb/AgACAAsAAAAWAPf/AgACAAsAAAAWAPj/AgACAAsAAAAWAPn/AgACAAsAAAAWAPr/AgACAAsAAAAWAPv/AgACAAsAAAAWAPz/AgACAAsAAAAUAAAAAgACAAsAAAAUAP//AgACAAsAAAAUAP7/AgACAAsAAAAUAP3/AgACAAsAAAAUAPz/AgACAAsAAAAUAPv/AgACAAsAAAAUAPr/AgACAAsAAAAUAPn/AgACAAsAAAAUAPj/AgACAAsAAAAUAPf/AgACAAsAAAAUAPb/AgACAAsAAAAUAPX/AgACAAsAAAAUAPT/AgACAAsAAAATAPT/AgACAAsAAAASAPT/AgACAAsAAAARAPT/AgACAAsAAAAQAPT/AgACAAsAAAAQAPX/AgACAAsAAAAQAPb/AgACAAsAAAAQAPf/AgACAAsAAAAQAPj/AgACAAsAAAAQAPn/AgACAAsAAAAQAPr/AgACAAsAAAAQAPv/AgACAAsAAAAQAPz/AgACAAsAAAAQAP3/AgACAAsAAAAQAP7/AgACAAsAAAAQAP//AgACAAsAAAAQAAAAAgACAAsAAAAQAAEAAgACAAsAAAAQAAIAAgACAAsAAAAQAAMAAgACAAsAAAAQAAQAAgACAAsAAAAQAAUAAgACAAsAAAAQAAYAAgACAAsAAAAQAAcAAgACAAsAAAAQAAgAAgACAAsAAAAQAAkAAgACAAsAAAARAAkAAgACAAsAAAARAAgAAgACAAsAAAARAAcAAgACAAsAAAARAAYAAgACAAsAAAARAAUAAgACAAsAAAARAAQAAgACAAsAAAARAAMAAgACAAsAAAARAAIAAgACAAsAAAARAAEAAgACAAsAAAARAAAAAgACAAsAAAARAP//AgACAAsAAAARAP7/AgACAAsAAAARAP3/AgACAAsAAAARAPz/AgACAAsAAAARAPv/AgACAAsAAAARAPr/AgACAAsAAAARAPn/AgACAAsAAAARAPj/AgACAAsAAAARAPf/AgACAAsAAAARAPb/AgACAAsAAAARAPX/AgACAAsAAAASAPX/AgACAAsAAAASAPb/AgACAAsAAAASAPf/AgACAAsAAAASAPj/AgACAAsAAAASAPn/AgACAAsAAAASAPr/AgACAAsAAAASAPv/AgACAAsAAAASAPz/AgACAAsAAAASAP3/AgACAAsAAAASAP7/AgACAAsAAAASAP//AgACAAsAAAASAAAAAgACAAsAAAASAAEAAgACAAsAAAASAAIAAgACAAsAAAASAAMAAgACAAsAAAASAAQAAgACAAsAAAASAAUAAgACAAsAAAASAAYAAgACAAsAAAASAAcAAgACAAsAAAASAAgAAgACAAsAAAASAAkAAgACAAsAAAATAAkAAgACAAsAAAATAAgAAgACAAsAAAATAAcAAgACAAsAAAATAAYAAgACAAsAAAATAAUAAgACAAsAAAATAAQAAgACAAsAAAATAAMAAgACAAsAAAATAAIAAgACAAsAAAATAAEAAgACAAsAAAATAAAAAgACAAsAAAATAP//AgACAAsAAAATAP7/AgACAAsAAAATAP3/AgACAAsAAAATAPz/AgACAAsAAAATAPv/AgACAAsAAAATAPr/AgACAAsAAAATAPn/AgACAAsAAAATAPj/AgACAAsAAAATAPf/AgACAAsAAAATAPb/AgACAAsAAAATAPX/AgACAAsAAAAUAAEAAgACAAsAAAAUAAIAAgACAAsAAAAUAAMAAgACAAsAAAAUAAQAAgACAAsAAAAUAAUAAgACAAsAAAAUAAYAAgACAAsAAAAUAAcAAgACAAsAAAAUAAgAAgACAAsAAAAUAAkAAgACAAsAAAAVAAMAAgACAAsAAAAVAAIAAgACAAsAAAAVAAEAAgACAAsAAAAVAAAAAgACAAsAAAAVAP//AgACAAsAAAAVAP7/AgACAAsAAAAVAP3/AgACAAsAAAAVAPz/AgACAAsAAAAVAPv/AgACAAsAAAAVAPr/AgACAAsAAAAVAPn/AgACAAsAAAAVAPj/AgACAAsAAAAVAPf/AgACAAsAAAAVAPb/AgACAAsAAAAVAPX/AgACAAsAAAAVAPT/AgACAAsAAADp//L/AgACAAsAAADq//L/AgACAAsAAADr//L/AgACAAsAAADs//L/AgACAAsAAADt//L/AgACAAsAAADu//L/AgACAAsAAADv//L/AgACAAsAAADw//L/AgACAAsAAADx//L/AgACAAsAAADy//L/AgACAAsAAADz//L/AgACAAsAAAD0//L/AgACAAsAAAD1//L/AgACAAsAAAD2//L/AgACAAsAAAD3//L/AgACAAsAAAD4//L/AgACAAsAAAD5//L/AgACAAsAAAD6//L/AgACAAsAAAD7//L/AgACAAsAAAD8//L/AgACAAsAAAD9//L/AgACAAsAAAD+//L/AgACAAsAAAD///L/AgACAAsAAAAAAPL/AgACAAsAAAABAPL/AgACAAsAAAACAPL/AgACAAsAAAADAPL/AgACAAsAAAAEAPL/AgACAAsAAAAFAPL/AgACAAsAAAAGAPL/AgACAAsAAAAHAPL/AgACAAsAAAAWAPL/AgACAAsAAAAVAPL/AgACAAsAAAAUAPL/AgACAAsAAAATAPL/AgACAAsAAAASAPL/AgACAAsAAAARAPL/AgACAAsAAAAQAPL/AgACAAsAAAAPAPL/AgACAAsAAAAOAPL/AgACAAsAAAANAPL/AgACAAsAAAAMAPL/AgACAAsAAAALAPL/AgACAAsAAAAKAPL/AgACAAsAAAAJAPL/AgACAAsAAAAIAPL/AgACAAsAAADp//H/AgACAAsAAADq//H/AgACAAsAAADr//H/AgACAAsAAADs//H/AgACAAsAAADt//H/AgACAAsAAADu//H/AgACAAsAAADv//H/AgACAAsAAADw//H/AgACAAsAAADx//H/AgACAAsAAADy//H/AgACAAsAAADz//H/AgACAAsAAAD0//H/AgACAAsAAAD1//H/AgACAAsAAAD2//H/AgACAAsAAAD3//H/AgACAAsAAAD4//H/AgACAAsAAAD5//H/AgACAAsAAAD6//H/AgACAAsAAAD7//H/AgACAAsAAAD8//H/AgACAAsAAAD9//H/AgACAAsAAAD+//H/AgACAAsAAAD///H/AgACAAsAAAAAAPH/AgACAAsAAAABAPH/AgACAAsAAAACAPH/AgACAAsAAAADAPH/AgACAAsAAAAEAPH/AgACAAsAAAAFAPH/AgACAAsAAAAGAPH/AgACAAsAAAAHAPH/AgACAAsAAAAIAPH/AgACAAsAAAAJAPH/AgACAAsAAAAKAPH/AgACAAsAAAALAPH/AgACAAsAAAAMAPH/AgACAAsAAAANAPH/AgACAAsAAAAOAPH/AgACAAsAAAAPAPH/AgACAAsAAAAQAPH/AgACAAsAAAARAPH/AgACAAsAAAASAPH/AgACAAsAAAATAPH/AgACAAsAAAAUAPH/AgACAAsAAAAVAPH/AgACAAsAAAAWAPH/AgACAAsAAAA=")
+tile_set = SubResource("TileSet_bp8id")
+
+[node name="TileMapLayerGrassClear" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAABAAAAAgADAAgAAAABAAEAAgADAAkAAAACAAAAAgABAAgAAAACAAEAAgABAAkAAAADAAEAAgACAAUAADAEAAIAAgADAAoAAAAEAAEAAgACAAUAADADAAIAAgACAAoAAAACAAIAAgACAAoAAAABAAIAAgACAAoAAAAAAAIAAgACAAoAAAAAAAEAAgADAAgAAAAJAP//AgADAAkAAAAIAP//AgACAAkAAAAIAAAAAgADAAoAAAAHAAAAAgADAAoAAAAHAAEAAgADAAoAAAAJAAAAAgADAAoAAAAJAAEAAgADAAoAAAAIAAEAAgADAAoAAAAHAAIAAgADAAoAAAAGAAIAAgADAAoAAAAFAAIAAgADAAoAAAAIAAIAAgADAAoAAAAJAAIAAgADAAoAAAD+//3/AgADAAoAAAD+//7/AgADAAoAAAD9//7/AgADAAoAAAD8//7/AgADAAoAAAD7//7/AgADAAoAAAD8//3/AgABAAkAAGD9//3/AgADAAoAAAD+////AgADAAoAAAD9////AgADAAoAAAD8////AgADAAoAAAD7////AgADAAoAAAAEAP3/AgADAAoAAAAEAPz/AgAEAAcAAFAFAPz/AgADAAoAAAAFAP3/AgADAAoAAAAGAPz/AgADAAoAAAAGAPv/AgADAAoAAAAHAPz/AgADAAoAAAAHAPv/AgADAAoAAAD3//n/AgADAAoAAAD4//n/AgAAAAgAAAD4//r/AgADAAoAAAD5//r/AgADAAoAAAD6//r/AgADAAoAAAD3//r/AgADAAoAAAD3//v/AgADAAoAAAD4//v/AgADAAoAAAD5//v/AgADAAoAAAD5//n/AgAAAAcAAGD3//z/AgACAAUAAAD2//r/AgADAAoAAAD2//n/AgADAAoAAAD+//z/AgABAAYAAGD6//n/AgABAAYAAGD7//r/AgADAAYAADAFAAEAAgACAAUAADAGAAEAAgAEAAgAAAAGAAAAAgADAAgAAAAHAP//AgADAAgAAAD//wIAAgABAAUAADD+/wIAAgABAAYAADADAP3/AgABAAYAADAEAP7/AgAEAAgAAGADAP7/AgADAAYAAAAFAP7/AgACAAkAADD7//3/AgACAAkAAAD6//7/AgACAAkAAGD6//3/AgADAAgAAAD6////AgACAAkAAGD7/wAAAgABAAkAADD8/wAAAgACAAUAAAD9/wAAAgACAAkAADD6//v/AgACAAUAAAD4//z/AgACAAUAAAD5//z/AgADAAYAAGD2//z/AgAAAAYAAAD2//v/AgACAAoAAAAJAP7/AgADAAgAAAAGAP3/AgAEAAgAADAGAP7/AgADAAgAADAHAP3/AgAEAAcAAGAIAPz/AgAEAAYAAGAIAP3/AgADAAYAAGAIAPv/AgADAAUAAGAHAPr/AgACAAUAADAIAPr/AgABAAYAAGAFAPv/AgABAAYAADD///3/AgADAAgAAFD///7/AgACAAkAAFD/////AgACAAUAAGD+/wAAAgACAAUAAAD//wAAAgABAAYAAAD7//v/AgABAAgAAFD9//z/AgACAAkAAAD3//j/AgABAAkAAAD2//j/AgABAAoAAAAGAPr/AgADAAgAAAD8//z/AgADAAYAAFD4//j/AgABAAgAAAD6/wAAAgABAAgAADA=")
+tile_set = SubResource("TileSet_bp8id")
+
+[node name="TileMapLayerTrees" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAHAP7/AAACAAAAAAAHAP//AAACAAEAAAAHAAAAAAACAAIAAAAHAAEAAAACAAMAAAAIAP7/AAADAAAAAAAIAP//AAADAAEAAAAIAAAAAAADAAIAAAAIAAEAAAADAAMAAAD3//b/AAACAAAAAAD3//f/AAACAAEAAAD3//j/AAACAAIAAAD3//n/AAACAAMAAAD4//b/AAADAAAAAAD4//f/AAADAAEAAAD4//j/AAADAAIAAAD4//n/AAADAAMAAADy//7/AAACAAAAAADy////AAACAAEAAADy/wAAAAACAAIAAADy/wEAAAACAAMAAADz//7/AAADAAAAAADz////AAADAAEAAADz/wAAAAADAAIAAADz/wEAAAADAAMAAAD6/wQAAAACAAAAAAD6/wUAAAACAAEAAAD6/wYAAAACAAIAAAD6/wcAAAACAAMAAAD7/wQAAAADAAAAAAD7/wUAAAADAAEAAAD7/wYAAAADAAIAAAD7/wcAAAADAAMAAAAEAAQAAAABAAIAAAAEAAUAAAABAAMAAAAFAAEAAAAEAAIAAAD3//3/AAAEAAIAAAD+//j/AAAEAAIAAAAIAPz/AAAIAAMAAAADAPn/AAAIAAMAAADz//v/AAAIAAMAAAALAAYAAAABAAIAAAALAAcAAAABAAMAAAANAAIAAAAGAAAAAAANAAMAAAAGAAEAAAANAAQAAAAGAAIAAAANAAUAAAAGAAMAAAAOAAIAAAAHAAAAAAAOAAMAAAAHAAEAAAAOAAQAAAAHAAIAAAAOAAUAAAAHAAMAAAAPAPf/AAAGAAAAAAAPAPj/AAAGAAEAAAAPAPn/AAAGAAIAAAAPAPr/AAAGAAMAAAAQAPf/AAAHAAAAAAAQAPj/AAAHAAEAAAAQAPn/AAAHAAIAAAAQAPr/AAAHAAMAAADv//b/AAAGAAAAAADv//f/AAAGAAEAAADv//j/AAAGAAIAAADv//n/AAAGAAMAAADw//b/AAAHAAAAAADw//f/AAAHAAEAAADw//j/AAAHAAIAAADw//n/AAAHAAMAAADz//H/AAAGAAAAAADz//L/AAAGAAEAAADz//P/AAAGAAIAAADz//T/AAAGAAMAAAD0//H/AAAHAAAAAAD0//L/AAAHAAEAAAD0//P/AAAHAAIAAAD0//T/AAAHAAMAAAAJAPL/AAAGAAAAAAAJAPP/AAAGAAEAAAAJAPT/AAAGAAIAAAAJAPX/AAAGAAMAAAAKAPL/AAAHAAAAAAAKAPP/AAAHAAEAAAAKAPT/AAAHAAIAAAAKAPX/AAAHAAMAAAD+//H/AAAGAAAAAAD+//L/AAAGAAEAAAD+//P/AAAGAAIAAAD+//T/AAAGAAMAAAD///H/AAAHAAAAAAD///L/AAAHAAEAAAD///P/AAAHAAIAAAD///T/AAAHAAMAAAARAP3/AAAGAAAAAAARAP7/AAAGAAEAAAARAP//AAAGAAIAAAARAAAAAAAGAAMAAAASAP3/AAAHAAAAAAASAP7/AAAHAAEAAAASAP//AAAHAAIAAAASAAAAAAAHAAMAAAANAPv/AAAFAAIAAAANAPz/AAAFAAMAAAAOAP7/AAAEAAIAAADw//3/AAAEAAIAAAAGAPT/AAAEAAIAAAD6/wIAAQAPAAAAAADx/wQAAQATAAAAAAD0/wEAAQAWAAEAAADw/wAAAQAWAAEAAAAPAPz/AQATAAAAAAALAPr/AQATAAAAAADy//f/AQATAAAAAADx//n/AQADAAQAAADx//r/AQADAAUAAADy//n/AQAEAAQAAADy//r/AQAEAAUAAADz//n/AQAFAAQAAADz//r/AQAFAAUAAAD5//T/AQADAAQAAAD5//X/AQADAAUAAAD6//T/AQAEAAQAAAD6//X/AQAEAAUAAAD7//T/AQAFAAQAAAD7//X/AQAFAAUAAAADAPT/AQADAAAAAAADAPX/AQADAAEAAAAEAPT/AQAEAAAAAAAEAPX/AQAEAAEAAAD//wYAAQADAAQAAAD//wcAAQADAAUAAAAAAAYAAQAEAAQAAAAAAAcAAQAEAAUAAAABAAYAAQAFAAQAAAABAAcAAQAFAAUAAAD0/wQAAQAGAAAAAAD0/wUAAQAGAAEAAAD1/wQAAQAHAAAAAAD1/wUAAQAHAAEAAAA=")
+tile_set = SubResource("TileSet_bp8id")
+
+[node name="ChatUI" parent="." node_paths=PackedStringArray("player_2ainpc") instance=ExtResource("5_hgw2v")]
+player_2ainpc = NodePath("../AICharacter/Player2AINPC")
+
+[node name="Pan" parent="." instance=ExtResource("8_wek8d")]
+position = Vector2(-1, -86)
+
+[node name="Meat" type="Area2D" parent="."]
+position = Vector2(-58, -82)
+
+[node name="Sprite2D" type="Sprite2D" parent="Meat"]
+texture = ExtResource("9_je085")
+region_enabled = true
+region_rect = Rect2(0, 0, 63, 62)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Meat"]
+shape = SubResource("CircleShape2D_gkltp")
+
+[node name="Area2D4" type="Area2D" parent="."]
+position = Vector2(-67, 9)
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D4"]
+texture = ExtResource("11_tmtua")
+region_enabled = true
+region_rect = Rect2(0, 98, 16, 14)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4"]
+shape = SubResource("CircleShape2D_gkltp")
+
+[node name="AICharacter" type="CharacterBody2D" parent="."]
+position = Vector2(102, -55)
+script = ExtResource("9_qmvo6")
+
+[node name="Player2AINPC" type="Node" parent="AICharacter" node_paths=PackedStringArray("tts_audio_player", "tool_calls_scan_node_for_functions")]
+script = ExtResource("14_3nx1u")
+character_name = "Sensei"
+character_description = "Friendly Teacher"
+character_system_message = "Match the player's mood. Be direct with your replies, but if the player is talkative then be talkative as well.
+This is now the third challenge: Copying of skill.
+Use tool calls extensively."
+tts_audio_player = NodePath("../AudioStreamPlayer")
+character_config = SubResource("Resource_g4npr")
+chat_config = SubResource("Resource_g6k0t")
+tool_calls_scan_node_for_functions = [NodePath("..")]
+tool_calls_function_definitions = SubResource("Resource_7mefh")
+metadata/_custom_type_script = "uid://bupnh0kqklshe"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AICharacter"]
+shape = SubResource("CircleShape2D_8avtb")
+
+[node name="Sprite2D" type="Sprite2D" parent="AICharacter"]
+texture = ExtResource("20_oxkyo")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AICharacter"]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(-108, -53)
+script = ExtResource("21_yea7t")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("CircleShape2D_ua84b")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+texture = ExtResource("22_apcst")
+
+[node name="Positions" type="Node2D" parent="."]
+
+[node name="CuttingBoard" type="Marker2D" parent="Positions"]
+position = Vector2(-33, -72)
+
+[node name="InitialPosition" type="Marker2D" parent="Positions"]
+position = Vector2(102, -53)
+
+[node name="KnifePosition" type="Marker2D" parent="Positions"]
+position = Vector2(-52, 8)

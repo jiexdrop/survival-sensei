@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=4 uid="uid://bj8ae0hidmukk"]
+[gd_scene load_steps=41 format=4 uid="uid://bj8ae0hidmukk"]
 
 [ext_resource type="Script" uid="uid://dka3qvssodgiw" path="res://scenes/game_scene/levels/level.gd" id="1_gkltp"]
 [ext_resource type="Texture2D" uid="uid://bwrv60mgqgl00" path="res://assets/Pixel Crawler/Environment/Tilesets/Floors_Tiles.png" id="2_bp8id"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://cihjocpx12ntm" path="res://assets/Pixel Crawler/Environment/Props/Static/Pan.png" id="13_g4npr"]
 [ext_resource type="Script" uid="uid://pvgsqtw8p321" path="res://scenes/game_scene/levels/pickable_pan.gd" id="13_paaax"]
 [ext_resource type="Texture2D" uid="uid://056enibgqv7i" path="res://assets/Pixel Crawler/Environment/Props/Static/Trees/Model_01/Size_02.png" id="13_xg5px"]
+[ext_resource type="Script" uid="uid://ucfcol067vlx" path="res://scenes/game_scene/levels/ai_character.gd" id="14_paaax"]
 [ext_resource type="Texture2D" uid="uid://tjaiwgd3exy" path="res://assets/Pixel Crawler/Environment/Structures/Stations/Cooking Station/Cooker/Cooker_03-Sheet.png" id="15_hhxfa"]
 [ext_resource type="Texture2D" uid="uid://soghkxx4jk3" path="res://assets/Pixel Crawler/Environment/Structures/Stations/Cooking Station/Butchery/Butchery_01-Sheet.png" id="16_gkltp"]
 [ext_resource type="Texture2D" uid="uid://clw3ba1g6sq7h" path="res://assets/Pixel Crawler/Environment/Props/Static/Tools.png" id="17_bp8id"]
@@ -810,13 +811,13 @@ tile_map_data = PackedByteArray("AAAHAP7/AAACAAAAAAAHAP//AAACAAEAAAAHAAAAAAACAAI
 tile_set = SubResource("TileSet_bp8id")
 
 [node name="ChatUI" parent="." node_paths=PackedStringArray("player_2ainpc") instance=ExtResource("5_g4npr")]
-player_2ainpc = NodePath("../Entity/Player2AINPC")
+player_2ainpc = NodePath("../AICharacter/Player2AINPC")
 
 [node name="Cooker" type="Area2D" parent="." node_paths=PackedStringArray("pan", "player_2ainpc")]
 position = Vector2(15, -74)
 script = ExtResource("7_vjvyu")
 pan = NodePath("../Pan")
-player_2ainpc = NodePath("../Entity/Player2AINPC")
+player_2ainpc = NodePath("../AICharacter/Player2AINPC")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Cooker"]
 sprite_frames = SubResource("SpriteFrames_g4npr")
@@ -880,10 +881,11 @@ region_rect = Rect2(87, 18, 26, 15)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PickablePan"]
 shape = SubResource("CircleShape2D_gkltp")
 
-[node name="Entity" type="CharacterBody2D" parent="."]
+[node name="AICharacter" type="CharacterBody2D" parent="."]
 position = Vector2(102, -55)
+script = ExtResource("14_paaax")
 
-[node name="Player2AINPC" type="Node" parent="Entity" node_paths=PackedStringArray("tts_audio_player")]
+[node name="Player2AINPC" type="Node" parent="AICharacter" node_paths=PackedStringArray("tts_audio_player")]
 script = ExtResource("3_7n1hf")
 character_name = "Sensei"
 character_description = "Friendly Teacher"
@@ -896,13 +898,13 @@ chat_config = SubResource("Resource_g6k0t")
 tool_calls_function_definitions = SubResource("Resource_7mefh")
 metadata/_custom_type_script = "uid://bupnh0kqklshe"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Entity"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AICharacter"]
 shape = SubResource("CircleShape2D_8avtb")
 
-[node name="Sprite2D" type="Sprite2D" parent="Entity"]
+[node name="Sprite2D" type="Sprite2D" parent="AICharacter"]
 texture = ExtResource("9_g6k0t")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Entity"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AICharacter"]
 
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(-108, -53)

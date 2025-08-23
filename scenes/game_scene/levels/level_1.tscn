@@ -1,4 +1,4 @@
-[gd_scene load_steps=164 format=4 uid="uid://bqrbyialgiray"]
+[gd_scene load_steps=165 format=4 uid="uid://bqrbyialgiray"]
 
 [ext_resource type="Script" uid="uid://dka3qvssodgiw" path="res://scenes/game_scene/levels/level.gd" id="1_tukvp"]
 [ext_resource type="Texture2D" uid="uid://bwrv60mgqgl00" path="res://assets/Pixel Crawler/Environment/Tilesets/Floors_Tiles.png" id="1_ua84b"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://bupnh0kqklshe" path="res://addons/player2/Player2AINPC.gd" id="3_bsimd"]
 [ext_resource type="PackedScene" uid="uid://hlmm40awxg4e" path="res://scenes/game_scene/chat_ui.tscn" id="4_h6ldy"]
 [ext_resource type="Texture2D" uid="uid://bvlw422cpg71" path="res://dev_scenes/thirdparty/kenney/tiny-dungeon/Tiles/tile_0098.png" id="6_ci2kr"]
+[ext_resource type="Script" uid="uid://ucfcol067vlx" path="res://scenes/game_scene/levels/ai_character.gd" id="10_0b6gl"]
 [ext_resource type="Script" uid="uid://dn11wvkta53ae" path="res://scenes/game_scene/levels/entities/player.gd" id="10_8avtb"]
 [ext_resource type="Script" uid="uid://bsi5tjg54www7" path="res://addons/player2/Player2AICharacterConfig.gd" id="10_fciuq"]
 [ext_resource type="Script" uid="uid://b6indg81ao1we" path="res://addons/player2/Player2APIConfig.gd" id="11_hkdw6"]
@@ -1774,7 +1775,7 @@ tile_map_data = PackedByteArray("AAAHAP7/AAACAAAAAAAHAP//AAACAAEAAAAHAAAAAAACAAI
 tile_set = SubResource("TileSet_w6i3l")
 
 [node name="ChatUI" parent="." node_paths=PackedStringArray("player_2ainpc") instance=ExtResource("4_h6ldy")]
-player_2ainpc = NodePath("../Entity/Player2AINPC")
+player_2ainpc = NodePath("../AICharacter/Player2AINPC")
 
 [node name="Rocks" type="Node2D" parent="."]
 
@@ -1829,7 +1830,7 @@ region_rect = Rect2(145, 100, 15, 11)
 [node name="Fire" type="Area2D" parent="." node_paths=PackedStringArray("player_2ainpc")]
 position = Vector2(0, 9)
 script = ExtResource("13_m77gi")
-player_2ainpc = NodePath("../Entity/Player2AINPC")
+player_2ainpc = NodePath("../AICharacter/Player2AINPC")
 
 [node name="FirePlace" type="AnimatedSprite2D" parent="Fire"]
 visible = false
@@ -1854,10 +1855,11 @@ position = Vector2(-52, -52)
 [node name="Wood3" parent="." instance=ExtResource("19_h6ldy")]
 position = Vector2(-120, -87)
 
-[node name="Entity" type="CharacterBody2D" parent="."]
+[node name="AICharacter" type="CharacterBody2D" parent="."]
 position = Vector2(102, -55)
+script = ExtResource("10_0b6gl")
 
-[node name="Player2AINPC" type="Node" parent="Entity" node_paths=PackedStringArray("tts_audio_player", "tool_calls_scan_node_for_functions")]
+[node name="Player2AINPC" type="Node" parent="AICharacter" node_paths=PackedStringArray("tts_audio_player", "tool_calls_scan_node_for_functions")]
 script = ExtResource("3_bsimd")
 character_name = "Sensei"
 character_description = "Friendly Teacher."
@@ -1871,13 +1873,13 @@ tool_calls_scan_node_for_functions = [NodePath("../..")]
 tool_calls_function_definitions = SubResource("Resource_tukvp")
 metadata/_custom_type_script = "uid://bupnh0kqklshe"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Entity"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AICharacter"]
 shape = SubResource("CircleShape2D_8avtb")
 
-[node name="Sprite2D" type="Sprite2D" parent="Entity"]
+[node name="Sprite2D" type="Sprite2D" parent="AICharacter"]
 texture = ExtResource("15_1ue85")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Entity"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AICharacter"]
 
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(-108, -53)
